@@ -27,10 +27,11 @@ a{
 }
 .main {
   display: flex;
+  min-height: 100vh;
+  position: relative;
 }
 .main > * {
   width: 50%;
-  min-height: 100vh;
 }
 .container {
   display: flex;
