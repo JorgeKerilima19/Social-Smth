@@ -30,9 +30,32 @@
   padding: 1em 0;
   justify-content: center;
   gap: 1em;
+  position: relative;
 }
 .main-right > * {
-  width: 85%;
+  width: 90%;
+  justify-content: space-evenly;
+}
+.main-right__sign-up{
+  background-color: whitesmoke;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  display: none;
+}
+.sign-up-button{
+  font-size: inherit;
+  border: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0.5rem;
+  background-color: transparent;
+}
+.main-right__sign-up.open{
+  display: flex;
+  flex-direction: column;
 }
 .main-right__log-in {
   gap: 1rem;

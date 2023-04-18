@@ -28,44 +28,121 @@
         <h3>You can find almost anything you want here</h3>
       </section>
       <section class="main-right container">
-        <article class="main-right__log-in container">
-          <h2>Welcome Back 😄</h2>
-          <h3>Log In</h3>
-          <ul class="log-in__media-container">
-            <li>
-              <a href="" class="log-in__form-container__item">
-                <svg class="image-holder__small"></svg>
-                <span>continue with</span>
-              </a>
-            </li>
-            <li>
-              <a href="" class="log-in__form-container__item">
-                <svg class="image-holder__small"></svg>
-                <span>continue with</span>
-              </a>
-            </li>
-            <li>
-              <a href="" class="log-in__form-container__item">
-                <svg class="image-holder__small"></svg>
-                <span>continue with</span>
-              </a>
-            </li>
-          </ul>
-        </article>
-        <div class="main-right__separator">Or</div>
-        <div class="main-right__log-in container">
-          <form action="" class="main-right__log-in__form container">
-            <div class="log-in__form__input-container">
-              <label for="">Email</label>
-              <input type="email" class="form__input-container__input" />
+        <div class="main-right__sign-up" id="sign-up-container">
+          <article class="main-right__log-in container">
+            <h2>Explore the world</h2>
+            <h3>Sign up</h3>
+            <ul class="log-in__media-container">
+              <li>
+                <a href="" class="log-in__form-container__item">
+                  <svg class="image-holder__small"></svg>
+                  <span>continue with</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="log-in__form-container__item">
+                  <svg class="image-holder__small"></svg>
+                  <span>continue with</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="log-in__form-container__item">
+                  <svg class="image-holder__small"></svg>
+                  <span>continue with</span>
+                </a>
+              </li>
+            </ul>
+          </article>
+          <div class="main-right__log-in container">
+            <form action="" class="main-right__log-in__form container">
+              <div class="log-in__form__input-container">
+                <label for="">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="form__input-container__input"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="log-in__form__input-container">
+                <label for="">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  class="form__input-container__input"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="log-in__form__input-container">
+                <label for="">Repeat-Password</label>
+                <input
+                  type="password"
+                  name="re-password"
+                  class="form__input-container__input"
+                  autocomplete="off"
+                />
+              </div>
+              <button class="main-right__log-in__form__button">Sign Up</button>
+            </form>
+            <div>
+              <span>Already have an account</span
+              ><button class="sign-up-button">Log In</button>
             </div>
-            <div class="log-in__form__input-container">
-              <label for="">Password</label>
-              <input type="password" class="form__input-container__input" />
+          </div>
+        </div>
+        <div class="flex-container">
+          <article class="main-right__log-in container">
+            <h2>Welcome Back 😄</h2>
+            <h3>Log In</h3>
+            <ul class="log-in__media-container">
+              <li>
+                <a href="" class="log-in__form-container__item">
+                  <svg class="image-holder__small"></svg>
+                  <span>continue with</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="log-in__form-container__item">
+                  <svg class="image-holder__small"></svg>
+                  <span>continue with</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="log-in__form-container__item">
+                  <svg class="image-holder__small"></svg>
+                  <span>continue with</span>
+                </a>
+              </li>
+            </ul>
+          </article>
+          <div class="main-right__separator">Or</div>
+          <div class="main-right__log-in container">
+            <form action="" class="main-right__log-in__form container">
+              <div class="log-in__form__input-container">
+                <label for="">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="form__input-container__input"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="log-in__form__input-container">
+                <label for="">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  class="form__input-container__input"
+                  autocomplete="off"
+                />
+              </div>
+              <button class="main-right__log-in__form__button">Log in</button>
+            </form>
+            <div>
+              <span>Do not have an account? </span>
+              <button class="sign-up-button">Sign Up</button>
             </div>
-            <button class="main-right__log-in__form__button">Log in</button>
-          </form>
-          <div><span>Do not have an account? </span> <a>Sign Up</a></div>
+          </div>
         </div>
       </section>
     </main>
@@ -77,5 +154,6 @@
       <a href="#">Contact Us</a>
       <a href="#">No Copyright</a>
     </footer>
+    <script src="./scripts/mainPage.js"></script>
   </body>
 </html>
