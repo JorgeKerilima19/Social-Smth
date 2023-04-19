@@ -37,13 +37,19 @@
   justify-content: space-evenly;
 }
 .main-right__sign-up{
+  display: flex;
+  flex-direction: column;
   background-color: whitesmoke;
   height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
+  opacity: 0;
+  transition: 0.2s;
+}
+.main-right__sign-up.open{
+  opacity: 1;
   z-index: 1;
-  display: none;
 }
 .sign-up-button{
   font-size: inherit;
@@ -52,10 +58,6 @@
   text-decoration: underline;
   padding: 0.5rem;
   background-color: transparent;
-}
-.main-right__sign-up.open{
-  display: flex;
-  flex-direction: column;
 }
 .main-right__log-in {
   gap: 1rem;
