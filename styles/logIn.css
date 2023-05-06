@@ -36,7 +36,7 @@
   width: 90%;
   justify-content: space-evenly;
 }
-.main-right__sign-up{
+.main-right__sign-up {
   display: flex;
   flex-direction: column;
   background-color: whitesmoke;
@@ -47,11 +47,11 @@
   opacity: 0;
   transition: 0.2s;
 }
-.main-right__sign-up.open{
+.main-right__sign-up.open {
   opacity: 1;
   z-index: 1;
 }
-.sign-up-button{
+.sign-up-button {
   font-size: inherit;
   border: 0;
   cursor: pointer;
