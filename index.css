@@ -49,3 +49,100 @@ a {
   background-color: gray;
   border-radius: 50%;
 }
+
+/*-----------------header---------------*/
+
+.nav-log {
+  height: calc(var(--header-height) - 1rem);
+}
+.nav-logo__alternative {
+  height: calc(var(--header-height) - 1rem);
+  display: none;
+}
+.logo:hover {
+  height: 4.5rem;
+}
+
+.header__nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--width-limit);
+  margin: auto;
+  padding: 0 1rem;
+}
+.header__nav__navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  min-width: 14rem;
+  max-width: 20rem;
+  gap: 1rem;
+}
+.navbar-item {
+  background-color: var(--bg-color-secondary);
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.navbar-items:not(.current):hover,
+.navbar-items:not(.current):active {
+  transform: scale(1.1);
+}
+.navbar-item__link {
+  display: flex;
+  align-items: center;
+}
+.navbar-item__text {
+  display: none;
+}
+.current {
+  background-color: var(--bg-color-secondary);
+  border-radius: 0;
+  height: var(--header-height);
+  width: 4.5rem;
+  display: flex;
+  align-items: center;
+}
+.navbar-items.current svg {
+  transform: scale(1.1);
+}
+
+@media (max-width: 500px) {
+  .nav-log {
+    display: none;
+  }
+  .nav-logo__alternative {
+    display: block;
+  }
+  .navbar-item {
+    width: 100%;
+    border-radius: 0;
+    background-color: var(--bg-color-body);
+    color: var(--bg-color-secondary);
+  }
+  .navbar-item:not(.current):hover,
+  .navbar-item:not(.current):active {
+    background-color: var(--bg-color-secondary);
+    color: var(--font-color);
+  }
+  .navbar-item:not(.current):active .navbar-item__link {
+    stroke: var(--font-color);
+  }
+  .navbar-items:not(.current):hover .navbar-item__link {
+    stroke: var(--bg-color-body);
+  }
+  .navbar-item__link {
+    gap: 1.5rem;
+  }
+  .navbar-item__text {
+    display: block;
+  }
+}
