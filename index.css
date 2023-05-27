@@ -55,7 +55,9 @@ a {
   background-color: gray;
   border-radius: 50%;
 }
-
+.profile-image{
+  margin: 0 1rem;
+}
 /*-----------------header---------------*/
 .current {
   background-color: var(--bg-color-secondary);
@@ -137,7 +139,11 @@ a {
 .navbar-items.current svg {
   transform: scale(1.1);
 }
-
+.button-menu-responsive {
+  display: none;
+  background-color: var(--bg-color-secondary);
+  border-radius: 50%;
+}
 @media (max-width: 500px) {
   .nav-log {
     display: none;
@@ -166,6 +172,54 @@ a {
     gap: 1.5rem;
   }
   .navbar-item__text {
+    display: block;
+  }
+}
+@media (max-width: 850px) {
+  .header__nav {
+    justify-content: space-evenly;
+  }
+  .header__nav__navbar {
+    display: none;
+    position: fixed;
+    top: var(--header-height);
+    flex-direction: column;
+    height: calc(100vh - var(--header-height));
+    max-width: none;
+    padding: 1rem 0;
+    width: 100%;
+    align-items: center;
+    background-color: var(--bg-color-body);
+    z-index: 999;
+  }
+  .navbar-item__link-svg {
+    stroke: var(--bg-color-secondary);
+    fill: var(--bg-color-secondary);
+  }
+  .navbar-item {
+    width: 100%;
+    border-radius: 0;
+    background-color: var(--bg-color-body);
+    color: var(--bg-color-secondary);
+  }
+  .navbar-item:not(.current):hover,
+  .navbar-item:not(.current):active {
+    background-color: var(--bg-color-secondary);
+    color: var(--font-color);
+  }
+  .navbar-item:not(.current):active .navbar-item__link-svg {
+    stroke: var(--font-color);
+  }
+  .navbar-item:not(.current):hover .navbar-item__link-svg {
+    stroke: var(--bg-color-body);
+  }
+  .navbar-item__link {
+    gap: 1.5rem;
+  }
+  .navbar-item__text {
+    display: block;
+  }
+  .button-menu-responsive {
     display: block;
   }
 }
