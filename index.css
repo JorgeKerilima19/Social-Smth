@@ -16,14 +16,15 @@ a {
   text-decoration: none;
 }
 :root {
-  --font-color: hsl(0, 0%, 7%);
-  --font-color-optional: hsl(0, 0%, 100%);
   --bg-color-secondary: hsl(0, 0%, 90%);
   --bg-color-body: hsl(24, 100%, 50%);
-  --header-height: 5rem;
+  --container-bg-color: hsl(0, 0%, 39%);
+  --font-color: hsl(0, 0%, 7%);
+  --font-color-optional: hsl(0, 0%, 100%);
   --footer-height: 3rem;
-  --svg-standard-size: 3rem;
+  --header-height: 5rem;
   --header-svg-size: calc((var(--header-height) - 1rem));
+  --svg-standard-size: 3rem;
 }
 .main {
   display: flex;
@@ -44,6 +45,12 @@ a {
   align-items: center;
 }
 .image-holder__small {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: gray;
+  border-radius: 50%;
+}
+.image-holder {
   height: 3rem;
   width: 3rem;
   background-color: gray;
@@ -55,7 +62,7 @@ a {
   background-color: gray;
   border-radius: 50%;
 }
-.profile-image{
+.profile-image {
   margin: 0 1rem;
 }
 /*-----------------header---------------*/
@@ -143,6 +150,48 @@ a {
   display: none;
   background-color: var(--bg-color-secondary);
   border-radius: 50%;
+}
+.hidden-menu {
+  display: none;
+  position: fixed;
+  min-height: 20rem;
+  width: min(100%, 20rem);
+  padding: 0.8rem 1rem;
+  background-color: var(--bg-color-container);
+  top: var(--header-height);
+  right: 0;
+  border-bottom: 0.3rem solid var(--container-bg-color);
+  border-left: 0.3rem solid var(--container-bg-color);
+  border-bottom-left-radius: 1.5em;
+}
+.show {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.menu-container {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 0.5rem;
+}
+.menu__item-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.footer {
+  font-size: 1em;
+  display: flex;
+  place-content: center space-evenly;
+  flex-wrap: wrap;
+  background-color: whitesmoke;
+  width: 100%;
+  gap: 0.4rem;
+  height: var(--footer-height);
+  text-decoration: underline;
 }
 @media (max-width: 500px) {
   .nav-log {
