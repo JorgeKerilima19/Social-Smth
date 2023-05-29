@@ -7,8 +7,8 @@ userImage.addEventListener("click",()=>{
 });
 
 const menuResponsiveButton=document.getElementById("button-menu-responsive");
-const menuResponsive=document.querySelector(".navbar");
+const menuResponsive=document.querySelector(".header__nav__navbar");
 
 menuResponsiveButton.addEventListener("click",()=>{
-    menuResponsive.classList.toggle("show-f")
+    menuResponsive.classList.toggle("show-navbar")
 });

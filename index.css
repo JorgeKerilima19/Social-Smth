@@ -59,6 +59,38 @@ a {
 .profile-image {
   margin: 0 1rem;
 }
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  place-content: center;
+  position: fixed;
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%, -15%);
+  height: 3.5em;
+  width: 3.5rem;
+  background-color: var(--bg-color-secondary);
+  border-radius: 50%;
+  border: thin solid black;
+  cursor: pointer;
+  transition: 0.5s;
+  z-index: 900;
+}
+.bar {
+  width: 2rem;
+  height: 3px;
+  background-color: var(--bg-color-body);
+  margin: 5px auto;
+}
+.hamburger-btn.open .bar:nth-child(1) {
+  display: none;
+}
+.hamburger-btn.open .bar:nth-child(2) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger-btn.open .bar:nth-child(3) {
+  transform: translateY(-5px) rotate(-45deg);
+}
 /*-----------------header---------------*/
 .current {
   background-color: var(--bg-color-secondary);
@@ -151,7 +183,7 @@ a {
   min-height: 20rem;
   width: min(100%, 20rem);
   padding: 0.8rem 1rem;
-  background-color: var(--bg-color-container);
+  background-color: var(--bg-color-secondary);
   top: var(--header-height);
   right: 0;
   border-bottom: 0.3rem solid var(--container-bg-color);
@@ -222,18 +254,26 @@ a {
   .header__nav {
     justify-content: space-evenly;
   }
+  .hamburger-btn{
+    display: flex;
+  }
   .header__nav__navbar {
     display: none;
     position: fixed;
     top: var(--header-height);
+    left: 0;
+    right: 0;
+    bottom: 0;
     flex-direction: column;
     height: calc(100vh - var(--header-height));
     max-width: none;
     padding: 1rem 0;
-    width: 100%;
     align-items: center;
     background-color: var(--bg-color-body);
     z-index: 999;
+  }
+  .show-navbar{
+    display: flex;
   }
   .navbar-item__link-svg {
     stroke: var(--bg-color-secondary);
