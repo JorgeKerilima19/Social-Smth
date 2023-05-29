@@ -1,0 +1,5 @@
+[class^="main__container"] {
+  background-color: aqua;
+  width: 30%;
+  min-height: 20rem;
+}
