@@ -50,6 +50,7 @@
 .main-right__sign-up.open {
   opacity: 1;
   z-index: 1;
+  color: black;
 }
 .sign-up-button {
   font-size: inherit;
@@ -165,7 +166,6 @@
     width: 100%;
   }
   .main-right > * {
-    z-index: 100;
     color: white;
   }
   .log-in__media-container {

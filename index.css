@@ -51,12 +51,6 @@ a {
   border-radius: 50%;
 }
 .image-holder {
-  height: 3rem;
-  width: 3rem;
-  background-color: gray;
-  border-radius: 50%;
-}
-.image-holder {
   height: var(--svg-standard-size);
   width: var(--svg-standard-size);
   background-color: gray;
