@@ -1,5 +1,5 @@
 [class^="main__container"] {
-  width: 30%;
+  min-width: 25%;
   min-height: 20rem;
   background-color: var(--container-color);
 }
@@ -20,4 +20,7 @@
   background-color: var(--bg-color-body);
   color: var(--font-color-optional);
   padding: 0.2rem 0.4rem;
+}
+.main__container-center {
+  flex-grow: 2;
 }

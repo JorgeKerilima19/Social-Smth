@@ -31,13 +31,17 @@ a {
   --header-height: 5rem;
   --header-svg-size: calc((var(--header-height) - 1rem));
   --svg-standard-size: 3rem;
+  --width-limit: 80rem;
 }
 .main {
   display: flex;
   min-height: var(--full-height-page);
+  max-width: var(--width-limit);
   position: relative;
   justify-content: center;
   gap: 1rem;
+  margin: auto;
+  padding: 1em 0;
 }
 .flex-container {
   display: flex;
@@ -137,10 +141,9 @@ a {
 .header__nav {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  max-width: var(--width-limit);
-  margin: auto;
+  width: max(100%, 20rem);
   padding: 0 1rem;
 }
 .header__nav__navbar {
@@ -311,5 +314,10 @@ a {
   }
   .button-menu-responsive {
     display: block;
+  }
+}
+@media (min-width:1440px){
+  .header{
+    justify-content: space-around;
   }
 }
