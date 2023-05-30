@@ -1,5 +1,23 @@
 [class^="main__container"] {
-  background-color: aqua;
   width: 30%;
   min-height: 20rem;
+  background-color: var(--container-color);
+}
+.main__container-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.form__input-container {
+  display: flex;
+}
+.form__input {
+  padding: 0.2rem;
+  outline: transparent;
+  border: none;
+}
+.form__button {
+  background-color: var(--bg-color-body);
+  color: var(--font-color-optional);
+  padding: 0.2rem 0.4rem;
 }

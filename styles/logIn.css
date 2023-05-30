@@ -1,6 +1,11 @@
 .header {
   display: none;
 }
+.main__log-in{
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
 .main-left,
 .main-right {
   position: relative;
