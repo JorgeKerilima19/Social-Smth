@@ -43,7 +43,22 @@ a {
   margin: auto;
   padding: 1em 0;
 }
-.flex-container {
+.flex {
+  display: flex;
+}
+.flex__gap-sm {
+  gap: 0.5rem;
+}
+.flex__gap-md {
+  gap: 1rem;
+}
+.flex__gap-bg {
+  gap: 2em;
+}
+.flex__sp-btw {
+  justify-content: space-between;
+}
+.flex__container {
   display: flex;
   flex-direction: column;
   gap: 2em;
@@ -316,8 +331,8 @@ a {
     display: block;
   }
 }
-@media (min-width:1440px){
-  .header{
+@media (min-width: 1440px) {
+  .header {
     justify-content: space-around;
   }
 }

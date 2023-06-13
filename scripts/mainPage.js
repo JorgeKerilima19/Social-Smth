@@ -6,4 +6,3 @@ signUpButtons.forEach((el) => {
     signUpContainer.classList.toggle("open");
   });
 });
-console.log("object");
