@@ -53,10 +53,12 @@
   top: 0;
   opacity: 0;
   transition: 0.2s;
+  pointer-events: none;
 }
 .main-right__sign-up.open {
   opacity: 1;
   z-index: 1;
+  pointer-events: all;
   color: black;
 }
 .sign-up-button {
