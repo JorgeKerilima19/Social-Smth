@@ -31,3 +31,11 @@
   flex-grow: 2;
   padding: 1rem 0;
 }
+.select {
+  font-size: inherit;
+  background-color: inherit;
+  height: 1.2rem;
+  border-radius: 0.2em;
+  border: thin solid var(--border-color);
+  padding: 0 0.5rem;
+}

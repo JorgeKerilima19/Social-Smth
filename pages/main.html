@@ -159,21 +159,23 @@
         </article>
       </section>
       <section class="main__container-center flex__container container">
-        <article class="post__container flex flex__sp-btw" >
+        <article class="post__container flex flex__sp-btw">
           <div class="flex flex__gap-sm">
             <svg class="image-holder"></svg>
             <div class="flex-container__row">
               <h4>Username</h4>
-              <span>Public</span>
+              <span id="post-privacy">Public</span>
             </div>
           </div>
-          <svg class="image-holder__small"></svg>
+          <select id="select" class="container select" name="Private Settings">
+            <option selected value="Public">Public</option>
+            <option value="Private">Private</option>
+          </select>
         </article>
-        </div>
       </section>
       <section class="main__container-right flex__container"></section>
     </main>
-    <script src="../scripts/mainPage.js"></script>
+    <script src="../scripts/index.js"></script>
     <script src="../scripts/functions/fetchData.js"></script>
     <script src="../scripts/navBar.js"></script>
   </body>

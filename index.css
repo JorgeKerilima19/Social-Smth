@@ -25,6 +25,7 @@ a {
   --border-container-color: hsl(0, 0%, 39%);
   --container-color: hsl(0, 0%, 85%);
   --font-color: hsl(0, 0%, 7%);
+  --border-color: hsl(0, 0%, 7%);
   --font-color-optional: hsl(0, 0%, 100%);
   --footer-height: 3rem;
   --full-height-page: calc(100vh - var(--header-height));
