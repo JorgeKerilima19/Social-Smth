@@ -159,19 +159,37 @@
         </article>
       </section>
       <section class="main__container-center flex__container container">
-        <article class="post__container flex flex__sp-btw">
-          <div class="flex flex__gap-sm">
-            <svg class="image-holder"></svg>
-            <div class="flex-container__row">
-              <h4>Username</h4>
-              <span id="post-privacy">Public</span>
+        <section class="post__container flex__container">
+          <article class="flex flex__sp-btw">
+            <div class="flex flex__gap-sm">
+              <svg class="image-holder"></svg>
+              <div class="flex-container__row">
+                <h4>Username</h4>
+                <span id="post-privacy">Public</span>
+              </div>
             </div>
-          </div>
-          <select id="select" class="container select" name="Private Settings">
-            <option selected value="Public">Public</option>
-            <option value="Private">Private</option>
-          </select>
-        </article>
+            <select
+              id="select"
+              class="container select"
+              name="Private Settings"
+            >
+              <option selected value="Public">Public</option>
+              <option value="Private">Private</option>
+            </select>
+          </article>
+          <article>
+            <header>What's new?</header>
+            <form class="container" action="">
+              <textarea class="text-area"> </textarea>
+              <ul class="menu-container flex__row flex__gap-md">
+                <li><svg class="image-holder__small"></svg></li>
+                <li><svg class="image-holder__small"></svg></li>
+                <li><svg class="image-holder__small"></svg></li>
+              </ul>
+            </form>
+          </article>
+        </section>
+        <section></section>
       </section>
       <section class="main__container-right flex__container"></section>
     </main>

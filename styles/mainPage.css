@@ -6,7 +6,7 @@
 .post__container {
   background-color: var(--bg-color-secondary);
   width: max(90%, 20rem);
-  height: min(10rem, 100%);
+  min-height: min(10rem, 100%);
   padding: 0.5rem 0.8rem;
 }
 .main__container-left {
@@ -38,4 +38,14 @@
   border-radius: 0.2em;
   border: thin solid var(--border-color);
   padding: 0 0.5rem;
+}
+.text-area {
+  width: 90%;
+  resize: none;
+  min-height: 8rem;
+  margin: 1rem auto;
+  background-color: inherit;
+  border-bottom: thin solid black;
+  padding: 0.5rem;
+  font-size: inherit;
 }
