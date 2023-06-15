@@ -66,6 +66,9 @@ a {
 .flex__row {
   flex-direction: row;
 }
+.flex__column {
+  flex-direction: column;
+}
 .flex__sp-btw {
   justify-content: space-between;
 }

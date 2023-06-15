@@ -1,13 +1,13 @@
 [class^="main__container"] {
   min-width: 25%;
-  min-height: 20rem;
+  height: max(20rem, 80vh);
   background-color: var(--container-color);
   overflow-y: auto;
 }
 .post__container {
   background-color: var(--bg-color-secondary);
   width: max(90%, 20rem);
-  min-height: min(10rem, 100%);
+  min-height: 20rem;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
 }
@@ -50,4 +50,7 @@
   border-bottom: thin solid black;
   padding: 0.5rem;
   font-size: inherit;
+}
+.post__image {
+  width: 95%;
 }
