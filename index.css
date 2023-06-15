@@ -72,6 +72,9 @@ a {
 .flex__sp-btw {
   justify-content: space-between;
 }
+.flex__item-center {
+  align-items: center;
+}
 .flex__container {
   display: flex;
   flex-direction: column;
