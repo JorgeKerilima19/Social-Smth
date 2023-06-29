@@ -86,7 +86,7 @@ function createPost() {
     "separator"
   );
 
-  const reactions = ["Reactions", "Comments", "Shares"];
+  const reactions = ["Reaction", "Comment", "Share"];
 
   reactions.forEach((el) => {
     const reactionContainer = document.createElement("div");
@@ -101,8 +101,11 @@ function createPost() {
       "flex__item-center"
     );
 
-    reactionNumber.innerText = randomNumber();
-    reactionDescription.innerText = el;
+    const number = randomNumber();
+    reactionNumber.innerText = number;
+    number < 2 && number > 0
+      ? (reactionDescription.innerText = el)
+      : (reactionDescription.innerText = el + "s");
 
     reactionContainer.appendChild(reactionSVG);
     reactionContainer.appendChild(reactionNumber);
