@@ -1,3 +1,5 @@
+import { salute } from "./functions/fetchData.js";
+
 //Log in/sign up page functions
 
 const signUpButtons = document.querySelectorAll(".sign-up-button");
@@ -11,4 +13,4 @@ signUpButtons.forEach((el) => {
 
 //MainPage functions
 
-const select = document.querySelector("#select");
+console.log(salute);

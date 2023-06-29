@@ -15,3 +15,4 @@ async function getPosts(userId) {
 
   return posts;
 }
+export const salute="hi"
