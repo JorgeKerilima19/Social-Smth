@@ -1,5 +1,9 @@
 import { randomNumber } from "../functions/randomNumber.js";
 
+//General Variables
+const SVG = document.createElement("svg");
+SVG.classList.add("image-holder__small");
+
 const postWrapper = document.getElementById("post-container");
 
 function createPost() {
@@ -41,11 +45,10 @@ function createPost() {
 
   const postSettings = document.createElement("div");
   const hidePost = document.createElement("svg");
-  const postOptions = document.createElement("svg");
+  const postOptions = SVG.cloneNode(true);
 
   postSettings.classList.add("flex", "flex__gap-sm");
   hidePost.classList.add("image-holder__small");
-  postOptions.classList.add("image-holder__small");
 
   postSettings.appendChild(hidePost);
   postSettings.appendChild(postOptions);
@@ -86,20 +89,17 @@ function createPost() {
     "separator"
   );
 
+  //Post Reactions
+
   const reactions = ["Reaction", "Comment", "Share"];
 
+  const reactionContainer = document.createElement("div");
+  reactionContainer.classList.add("flex", "flex__gap-sm", "flex__item-center");
   reactions.forEach((el) => {
-    const reactionContainer = document.createElement("div");
-    const reactionSVG = document.createElement("svg");
+    const container = reactionContainer.cloneNode(true);
+    const reactionSVG = SVG.cloneNode(true);
     const reactionNumber = document.createElement("span");
     const reactionDescription = document.createElement("span");
-
-    reactionSVG.classList.add("image-holder__small");
-    reactionContainer.classList.add(
-      "flex",
-      "flex__gap-sm",
-      "flex__item-center"
-    );
 
     const number = randomNumber();
     reactionNumber.innerText = number;
@@ -107,15 +107,35 @@ function createPost() {
       ? (reactionDescription.innerText = el)
       : (reactionDescription.innerText = el + "s");
 
-    reactionContainer.appendChild(reactionSVG);
-    reactionContainer.appendChild(reactionNumber);
-    reactionContainer.appendChild(reactionDescription);
-
-    postReactions.appendChild(reactionContainer);
+    container.appendChild(reactionSVG);
+    container.appendChild(reactionNumber);
+    container.appendChild(reactionDescription);
+    postReactions.appendChild(container);
   });
+
+  //Post Interactions
+
+  const postInteractions = document.createElement("section");
+
+  const interactions = ["Like", "Comment", "Share"];
+
+  interactions.forEach((el) => {
+    const container = reactionContainer.cloneNode(true);
+    const interactionSVG = SVG.cloneNode(true);
+    const interactionDescription = document.createElement("span");
+
+    interactionDescription.innerText = el;
+
+    container.appendChild(interactionSVG);
+    container.appendChild(interactionDescription);
+    postInteractions.appendChild(container);
+  });
+
+  postInteractions.classList.add("flex", "flex__sp-ard", "width__full");
 
   postContentContainer.appendChild(postMainContent);
   postContentContainer.appendChild(postReactions);
+  postContentContainer.appendChild(postInteractions);
 
   postContainer.appendChild(authorInfo);
   postContainer.appendChild(postContentContainer);
