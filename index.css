@@ -391,6 +391,20 @@ a {
   .main__container-left {
     display: none;
   }
+  .show-menu-left {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    min-height: 100vh;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+    background-color: var(--container-color);
+    z-index: 100;
+  }
 }
 @media (min-width: 1440px) {
   .header {
