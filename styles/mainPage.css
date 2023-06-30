@@ -5,7 +5,7 @@
   overflow-y: auto;
 }
 .post__container {
-  background-color: var(--bg-color-secondary);
+  background-color: var(--container-color);
   width: max(90%, 20rem);
   min-height: 20rem;
   padding: 1rem 2rem;
@@ -32,6 +32,7 @@
 .main__container-center {
   flex-grow: 2;
   padding: 1rem 0;
+  background-color: transparent;
 }
 .select {
   font-size: inherit;
@@ -53,4 +54,7 @@
 }
 .post__image {
   width: 95%;
+}
+.main__container-right {
+  padding: 1rem 0.8rem;
 }
