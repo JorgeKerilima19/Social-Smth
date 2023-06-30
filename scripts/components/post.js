@@ -97,7 +97,6 @@ function createPost() {
   reactionContainer.classList.add("flex", "flex__gap-sm", "flex__item-center");
   reactions.forEach((el) => {
     const container = reactionContainer.cloneNode(true);
-    const reactionSVG = SVG.cloneNode(true);
     const reactionNumber = document.createElement("span");
     const reactionDescription = document.createElement("span");
 
@@ -107,7 +106,6 @@ function createPost() {
       ? (reactionDescription.innerText = el)
       : (reactionDescription.innerText = el + "s");
 
-    container.appendChild(reactionSVG);
     container.appendChild(reactionNumber);
     container.appendChild(reactionDescription);
     postReactions.appendChild(container);

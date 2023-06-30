@@ -325,12 +325,14 @@ a {
     display: block;
   }
 }
+@media (max-width: 650px) {
+  .main__container-right {
+    display: none;
+  }
+}
 @media (max-width: 850px) {
   .header__nav {
     justify-content: space-evenly;
-  }
-  .hamburger-btn {
-    display: flex;
   }
   .header__nav__navbar {
     display: none;
@@ -380,6 +382,14 @@ a {
   }
   .button-menu-responsive {
     display: block;
+  }
+}
+@media (max-width: 1050px) {
+  .hamburger-btn {
+    display: flex;
+  }
+  .main__container-left {
+    display: none;
   }
 }
 @media (min-width: 1440px) {
