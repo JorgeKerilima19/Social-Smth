@@ -44,14 +44,17 @@ function createPost() {
   //Post settings
 
   const postSettings = document.createElement("div");
-  const hidePost = document.createElement("svg");
-  const postOptions = SVG.cloneNode(true);
+  const hidePost = document.createElement("img");
+  const postOptions = document.createElement("img");
 
   postSettings.classList.add("flex", "flex__gap-sm");
-  hidePost.classList.add("image-holder__small");
+  hidePost.src = "../../assets/svg/cross.svg";
+  postOptions.src = "../../assets/svg/dotsHorizontal.svg";
+  postOptions.classList.add("svg-container__small");
+  hidePost.classList.add("svg-container__small");
 
-  postSettings.appendChild(hidePost);
   postSettings.appendChild(postOptions);
+  postSettings.appendChild(hidePost);
 
   postAuthorInfo.appendChild(authorProfileImage);
   postAuthorInfo.appendChild(authorAppInfo);

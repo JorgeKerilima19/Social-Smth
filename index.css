@@ -98,7 +98,11 @@ a {
 .width__full {
   width: 100%;
 }
-
+.svg-container__small {
+  height: 1.5rem;
+  width: 1.5rem;
+  object-fit: contain;
+}
 .image-holder__small {
   height: 1.5rem;
   width: 1.5rem;
