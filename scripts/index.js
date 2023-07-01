@@ -48,7 +48,7 @@ loadMorePost.addEventListener("click", () => {
       const newPost = createPost(
         el.name,
         el.username,
-        post.body.replace(/<br>/g, "")
+        post.body.replace(/\n/g, "")
       );
       postWrapper.appendChild(newPost);
     });

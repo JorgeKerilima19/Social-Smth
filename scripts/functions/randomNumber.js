@@ -5,7 +5,7 @@ export function randomNumber() {
 }
 
 export function randomNumber100() {
-  const number = Math.floor(Math.random() * 20);
+  const number = Math.floor(Math.random() * 99) + 1;
 
   return number;
 }
