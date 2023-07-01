@@ -18,13 +18,21 @@ hamburgerButtonRight.addEventListener("click", () => {
 });
 
 const onlineFriendsContainer = document.getElementById("active-friends");
+const offlineFriendsContainer = document.getElementById("offline-friends");
 
-const friend = displayFriend("Carlos");
-
-onlineFriendsContainer.appendChild(friend);
-
-const Users = getUsers().then((users) => {
-  users.forEach((el) => console.log(el.name));
+getUsers().then((users) => {
+  const friendList = document.createDocumentFragment();
+  users.forEach((el) => {
+    const friend = displayFriend(el.name);
+    friendList.appendChild(friend);
+  });
+  onlineFriendsContainer.appendChild(friendList);
 });
-
-console.log(Users);
+getUsers().then((users) => {
+  const friendList = document.createDocumentFragment();
+  users.forEach((el) => {
+    const friend = displayFriend(el.name);
+    friendList.appendChild(friend);
+  });
+  offlineFriendsContainer.appendChild(friendList);
+});
