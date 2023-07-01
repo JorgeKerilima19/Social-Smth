@@ -1,8 +1,6 @@
 import { randomNumber } from "../functions/randomNumber.js";
-
+import SVG from "./generalComponents.js";
 //General Variables
-const SVG = document.createElement("svg");
-SVG.classList.add("image-holder__small");
 
 const postWrapper = document.getElementById("post-container");
 

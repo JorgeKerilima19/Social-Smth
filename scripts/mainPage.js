@@ -1,3 +1,5 @@
+import displayFriend from "./components/friend.js";
+
 const select = document.querySelector("#select");
 
 select.addEventListener("change", () => {
@@ -13,3 +15,11 @@ const hamburgerButtonRight = document.querySelector(
 hamburgerButtonRight.addEventListener("click", () => {
   menuRight.classList.toggle("show-menu-left");
 });
+
+const onlineFriendsContainer = document.getElementById("active-friends");
+
+const friend = displayFriend("Carlos");
+
+onlineFriendsContainer.appendChild(friend);
+
+console.log(onlineFriendsContainer);
