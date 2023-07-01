@@ -4,6 +4,14 @@
   background-color: var(--container-color);
   overflow-y: auto;
 }
+[class^="main__container"]::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0.4rem;
+}
+[class^="main__container"]::-webkit-scrollbar-thumb {
+  background-color: var(--bg-color-body);
+  border-radius: 0.5rem;
+}
 .post__container {
   background-color: var(--container-color);
   width: max(90%, 20rem);
@@ -58,9 +66,15 @@
 .main__container-right {
   padding: 1rem 0.8rem;
 }
-@media (max-width: 500px){
-  .post__container{
+@media (max-width: 500px) {
+  .post__container {
     width: 100%;
     padding: 1rem;
+  }
+  [class^="main__container"]::-webkit-scrollbar {
+    display: none;
+  }
+  [class^="main__container"]::-webkit-scrollbar-thumb {
+    display: none;
   }
 }
