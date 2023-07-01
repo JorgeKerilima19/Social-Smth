@@ -1,4 +1,5 @@
 import displayFriend from "./components/friend.js";
+import { getUsers } from "./functions/fetchUsers.js";
 
 const select = document.querySelector("#select");
 
@@ -22,4 +23,8 @@ const friend = displayFriend("Carlos");
 
 onlineFriendsContainer.appendChild(friend);
 
-console.log(onlineFriendsContainer);
+const Users = getUsers().then((users) => {
+  users.forEach((el) => console.log(el.name));
+});
+
+console.log(Users);

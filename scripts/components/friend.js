@@ -1,4 +1,4 @@
-import SVG from "./generalComponents.js";
+import SVG from "./commonComponents/SVG.js";
 
 function displayFriend(nameFriend) {
   const container = document.createElement("li");
