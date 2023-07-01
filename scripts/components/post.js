@@ -2,9 +2,12 @@ import { randomNumber } from "../functions/randomNumber.js";
 import SVG from "./commonComponents/SVG.js";
 //General Variables
 
-const postWrapper = document.getElementById("post-container");
-
-function createPost() {
+export default function createPost(
+  username,
+  nickname,
+  postContent,
+  postImage = false
+) {
   //main Container
   const postContainer = document.createElement("article");
   postContainer.classList.add(
@@ -29,14 +32,18 @@ function createPost() {
   //Post author app info
 
   const authorAppInfo = document.createElement("div");
-  const authorName = document.createElement("h4");
+  const authorNickName = document.createElement("h4");
+  const authorName = document.createElement("span");
   const postPrivacy = document.createElement("span");
 
-  authorName.innerText = "Username";
+  authorNickName.innerText = nickname || "Nickname";
+  authorName.innerText = username || "Username";
   postPrivacy.innerText = "Public";
+  authorName.classList.add("profile-nickname");
   authorAppInfo.classList.add("flex-container__row");
 
-  authorAppInfo.appendChild(authorName);
+  authorNickName.appendChild(authorName);
+  authorAppInfo.appendChild(authorNickName);
   authorAppInfo.appendChild(postPrivacy);
 
   //Post settings
@@ -64,21 +71,20 @@ function createPost() {
 
   const postContentContainer = document.createElement("section");
 
-  postContentContainer.classList.add("container", "flex__gap-sm");
+  postContentContainer.classList.add("flex", "flex__gap-sm", "flex__column");
 
   const postMainContent = document.createElement("div");
 
   const postMainContentDescription = document.createElement("p");
   const postMainContentImg = document.createElement("img");
 
-  postMainContent.classList.add("container", "flex__gap-sm");
+  postMainContent.classList.add("flex", "flex__gap-sm", "flex__column");
   postMainContentImg.classList.add("post__image");
-  postMainContentImg.src = "../assets/postImages/minecraftMeme.jpg";
-  postMainContentDescription.innerText =
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad perferendis accusantium odio animi aperiam id?";
+  postMainContentImg.src = postImage;
+  postMainContentDescription.innerText = postContent || "No content given";
 
   postMainContent.appendChild(postMainContentDescription);
-  postMainContent.appendChild(postMainContentImg);
+  postImage ? postMainContent.appendChild(postMainContentImg) : "";
 
   const postReactions = document.createElement("section");
 
@@ -139,6 +145,6 @@ function createPost() {
   postContainer.appendChild(authorInfo);
   postContainer.appendChild(postContentContainer);
 
-  postWrapper.appendChild(postContainer);
+  return postContainer
+
 }
-createPost();

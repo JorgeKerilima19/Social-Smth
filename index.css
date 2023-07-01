@@ -124,6 +124,17 @@ a {
 .profile-image {
   margin: 0 1rem;
 }
+.profile-nickname{
+  padding-left: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: lighter;
+}
+.profile-nickname::before{
+  content: "(";
+}
+.profile-nickname::after{
+  content: ")";
+}
 .separator {
   position: relative;
 }
