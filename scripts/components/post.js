@@ -80,7 +80,7 @@ export default function createPost(
 
   postMainContent.classList.add("flex", "flex__gap-sm", "flex__column");
   postMainContentImg.classList.add("post__image");
-  postMainContentImg.src = postImage;
+  postMainContentImg.src = postImage || "";
   postMainContentDescription.innerText = postContent || "No content given";
 
   postMainContent.appendChild(postMainContentDescription);
@@ -145,6 +145,5 @@ export default function createPost(
   postContainer.appendChild(authorInfo);
   postContainer.appendChild(postContentContainer);
 
-  return postContainer
-
+  return postContainer;
 }

@@ -1,6 +1,10 @@
 import displayFriend from "./components/friend.js";
-import { getUsers } from "./functions/fetchUsers.js";
 import createPost from "./components/post.js";
+
+import { getUsers, getUser } from "./functions/fetchUsers.js";
+import { getPost } from "./functions/fetchPosts.js";
+
+import { randomNumber100 } from "./functions/randomNumber.js";
 
 // Post creating privacy
 
@@ -32,6 +36,24 @@ const postDefault = createPost(
   "../assets/postImages/minecraftMeme.jpg"
 );
 postWrapper.appendChild(postDefault);
+//Generate more Posts
+
+const loadMorePost = document.getElementById("load-more-button");
+
+loadMorePost.addEventListener("click", () => {
+  const postId = randomNumber100();
+
+  getPost(postId).then((post) => {
+    getUser(post.userId).then((el) => {
+      const newPost = createPost(
+        el.name,
+        el.username,
+        post.body.replace(/<br>/g, "")
+      );
+      postWrapper.appendChild(newPost);
+    });
+  });
+});
 
 //Display User Friends active and non-active
 

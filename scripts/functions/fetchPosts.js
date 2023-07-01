@@ -1,6 +1,5 @@
-
-export async function getPosts(userId) {
-  const url = `https://jsonplaceholder.typicode.com/posts?userId=${userId}`;
+export async function getPost(postId) {
+  const url = `https://jsonplaceholder.typicode.com/posts/${postId}`;
 
   const res = await fetch(url);
   const posts = await res.json();

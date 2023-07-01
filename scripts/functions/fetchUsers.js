@@ -6,3 +6,11 @@ export async function getUsers() {
 
   return users;
 }
+export async function getUser(userId) {
+  const url = `https://jsonplaceholder.typicode.com/users/${userId}`;
+
+  const res = await fetch(url);
+  const users = await res.json();
+
+  return users;
+}

@@ -3,3 +3,9 @@ export function randomNumber() {
 
   return number;
 }
+
+export function randomNumber100() {
+  const number = Math.floor(Math.random() * 20);
+
+  return number;
+}
