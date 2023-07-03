@@ -54,7 +54,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  gap: 0.5rem;
+  gap: 0.8rem;
 }
 .menu-header__title {
   font-size: 1.2em;
@@ -98,6 +98,9 @@ a {
 .width__full {
   width: 100%;
 }
+.width__md {
+  width: 50%;
+}
 .svg-container__small {
   height: 1.5rem;
   width: 1.5rem;
@@ -124,15 +127,15 @@ a {
 .profile-image {
   margin: 0 1rem;
 }
-.profile-nickname{
+.profile-nickname {
   padding-left: 0.5rem;
   font-size: 0.9rem;
   font-weight: lighter;
 }
-.profile-nickname::before{
+.profile-nickname::before {
   content: "(";
 }
-.profile-nickname::after{
+.profile-nickname::after {
   content: ")";
 }
 .separator {
@@ -298,12 +301,27 @@ a {
   align-items: center;
   gap: 1rem;
 }
+.menu-dark-mode__bg {
+  width: 3em;
+  height: 1.4em;
+  background-color: var(--bg-color-body);
+  border-radius: 0.8rem;
+}
+.menu-dark-mode__button {
+  width: 1.4em;
+  height: 1.4em;
+  background-color: var(--font-color-optional);
+  border-radius: 0.8rem;
+  transition: 0.3s;
+}
+.menu-dark-mode__button.on {
+  transform: translateX(115%);
+}
 .footer {
   font-size: 1em;
   display: flex;
   place-content: center space-evenly;
   flex-wrap: wrap;
-  background-color: whitesmoke;
   width: 100%;
   gap: 0.4rem;
   height: var(--footer-height);

@@ -57,7 +57,7 @@
           <path d="M5.143 7.429h13.714M5.14 12h13.712M5.143 16.571h13.709" />
         </svg>
         <section id="hidden-menu" class="hidden-menu">
-          <article class="hidden-menu-user">
+          <article class="flex flex__sp-btw">
             <svg class="image-holder"></svg>
             <div>
               <a href="#" class="user-name"><h4>UserName</h4></a>
@@ -67,9 +67,25 @@
           <article class="hidden-menu-links">
             <ul class="menu-container">
               <li>
-                <a href="" class="menu__item-link">
+                <div class="flex flex__sp-btw flex__item-center">
+                  <div id="dark-mode" class="menu-dark-mode__bg">
+                    <div id="dark-mode__button" class="menu-dark-mode__button"></div>
+                  </div>
+                  <span class="width__md">Dark Mode</span>
+                </div>
+              </li>
+              <li>
+                <a href="" class="flex flex__sp-btw flex__item-center">
                   <svg class="image-holder__small"></svg>
-                  <span>Settings and Privacy</span>
+                  <span class="width__md">Settings and Privacy</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="flex flex__sp-btw flex__item-center">
+                  <svg class="image-holder__small"></svg>
+                  <span class="width__md"
+                    >Helps center and recommendations</span
+                  >
                 </a>
               </li>
             </ul>
@@ -156,8 +172,10 @@
             </form>
           </article>
         </section>
-        <div id="post-container" class="flex__container container width__full">
-        </div>
+        <div
+          id="post-container"
+          class="flex__container container width__full"
+        ></div>
         <button id="load-more-button" class="form__button">Load More</button>
       </section>
       <section class="main__container-right flex__container">
@@ -180,7 +198,6 @@
       </section>
     </main>
     <script src="../scripts/index.js" type="module"></script>
-    <script src="../scripts/components/post.js" type="module"></script>
     <script src="../scripts/navBar.js"></script>
   </body>
 </html>

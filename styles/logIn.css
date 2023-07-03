@@ -156,7 +156,6 @@
   display: flex;
   place-content: center space-evenly;
   flex-wrap: wrap;
-  background-color: whitesmoke;
   width: 100%;
   gap: 0.4rem;
   height: var(--footer-height);
