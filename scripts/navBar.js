@@ -23,4 +23,5 @@ const darkModeButton = document.getElementById("dark-mode__button");
 
 darkModeContainer.addEventListener("click", () => {
   darkModeButton.classList.toggle("on");
+  document.body.classList.toggle("dark-mode")
 });

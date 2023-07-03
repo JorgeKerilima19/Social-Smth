@@ -48,6 +48,10 @@
   border-radius: 0.2em;
   border: thin solid var(--border-color);
   padding: 0 0.5rem;
+  color: var(--font-color);
+}
+.select > * {
+  color: var(--font-color-optional);
 }
 .text-area {
   width: 90%;
@@ -55,9 +59,10 @@
   min-height: 8rem;
   margin: 1rem auto;
   background-color: inherit;
-  border-bottom: thin solid black;
+  border-bottom: thin solid var(--font-color);
   padding: 0.5rem;
   font-size: inherit;
+  color: var(--font-color);
 }
 .post__image {
   width: 95%;
