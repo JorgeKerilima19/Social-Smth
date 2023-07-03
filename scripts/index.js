@@ -3,6 +3,7 @@ import createPost from "./components/post.js";
 
 import { getUsers, getUser } from "./functions/fetchUsers.js";
 import { getPost } from "./functions/fetchPosts.js";
+import clearSpaces from "./functions/clearSpaces.js";
 
 import { randomNumber100 } from "./functions/randomNumber.js";
 
@@ -35,7 +36,15 @@ const postDefault = createPost(
   "This is an example on how a post should look like",
   "../assets/postImages/minecraftMeme.jpg"
 );
+const postDefault1 = createPost(
+  "Ervin Howell",
+  "Antonette",
+  clearSpaces(
+    "itaque id aut magnam\npraesentium quia et ea odit et ea voluptas et\nsapiente quia nihil amet occaecati quia id voluptatem\nincidunt ea est distinctio odio"
+  )
+);
 postWrapper.appendChild(postDefault);
+postWrapper.appendChild(postDefault1);
 //Generate more Posts
 
 const loadMorePost = document.getElementById("load-more-button");
@@ -45,11 +54,7 @@ loadMorePost.addEventListener("click", () => {
 
   getPost(postId).then((post) => {
     getUser(post.userId).then((el) => {
-      const newPost = createPost(
-        el.name,
-        el.username,
-        post.body.replace(/\n/g, "")
-      );
+      const newPost = createPost(el.name, el.username, clearSpaces(post.body));
       postWrapper.appendChild(newPost);
     });
   });
