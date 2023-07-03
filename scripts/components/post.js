@@ -52,6 +52,13 @@ export default function createPost(
   const hidePost = document.createElement("img");
   const postOptions = document.createElement("img");
 
+  hidePost.addEventListener("click", () => {
+    const articleParent = postOptions.closest(".post__container");
+    if (articleParent) {
+      articleParent.remove();
+    }
+  });
+
   postSettings.classList.add("flex", "flex__gap-sm");
   hidePost.src = "../../assets/svg/cross.svg";
   postOptions.src = "../../assets/svg/dotsHorizontal.svg";
