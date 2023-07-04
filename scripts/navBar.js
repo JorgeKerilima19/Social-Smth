@@ -23,5 +23,21 @@ const darkModeButton = document.getElementById("dark-mode__button");
 
 darkModeContainer.addEventListener("click", () => {
   darkModeButton.classList.toggle("on");
-  document.body.classList.toggle("dark-mode")
+  document.body.classList.toggle("dark-mode");
+
+  if (localStorage.getItem("theme") == "light") {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
 });
+
+if (localStorage.getItem("theme") == "light") {
+  darkModeButton.classList.remove("on");
+  document.body.classList.remove("dark-mode");
+} else if (localStorage.getItem("theme") == "dark") {
+  darkModeButton.classList.add("on");
+  document.body.classList.add("dark-mode");
+} else {
+  localStorage.setItem("theme", "light");
+}
