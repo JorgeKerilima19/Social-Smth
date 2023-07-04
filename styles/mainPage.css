@@ -20,7 +20,6 @@
 }
 .main__container-left {
   display: flex;
-  align-items: center;
   justify-content: space-around;
 }
 .form__input-container {

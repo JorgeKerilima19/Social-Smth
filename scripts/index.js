@@ -31,17 +31,37 @@ hamburgerButtonRight.addEventListener("click", () => {
 //Right Menu display items
 
 const menuRightItems = [
-  "Friends",
-  "Saved",
-  "Watch",
-  "Notifications",
-  "Settings and Privacy",
+  {
+    itemTitle: "Friends",
+    itemImage: false,
+    itemTo: "../pages/friends.html",
+  },
+  {
+    itemTitle: "Saved",
+    itemImage: false,
+    itemTo: "../pages/saved.html",
+  },
+  {
+    itemTitle: "Watch",
+    itemImage: false,
+    itemTo: "../pages/watch.html",
+  },
+  {
+    itemTitle: "Notifications",
+    itemImage: false,
+    itemTo: "../pages/notifications.html",
+  },
+  {
+    itemTitle: "Settings and Privacy",
+    itemImage: false,
+    itemTo: "../pages/settings.html",
+  },
 ];
 
 const menuRightContainer = document.getElementById("menu-right-container");
 
 menuRightItems.forEach((el) => {
-  const item = createMenuItem(false, el);
+  const item = createMenuItem(el.itemImage, el.itemTitle, el.itemTo);
 
   menuRightContainer.appendChild(item);
 });
