@@ -50,7 +50,7 @@
   color: var(--font-color);
 }
 .select > * {
-  color: var(--font-color-optional);
+  color: var(--font-color-static);
 }
 .text-area {
   width: 90%;

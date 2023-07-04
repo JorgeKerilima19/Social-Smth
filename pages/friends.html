@@ -3,9 +3,123 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Watch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Andika&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../index.css" />
+    <title>Social Unknown</title>
   </head>
   <body>
-    <h2>HELLO Friends</h2>
+    <header class="header">
+      <a href="./main.html">
+        <img
+          class="nav-logo__alternative"
+          src="../assets/logos/alternativeLogo.svg"
+          alt="alternativeLogo"
+        />
+        <img
+          class="nav-log"
+          src="../assets/logos/mainLogo.svg"
+          alt="MainLogo"
+        />
+      </a>
+      <nav class="header__nav">
+        <ul class="header__nav__navbar">
+          <li class="navbar-item">
+            <a class="navbar-item__link" href="#">
+              <img
+                src="../assets/svg/chat.svg"
+                class="navbar-item__link-svg"
+                alt="chatImage"
+              />
+              <span class="navbar-item__text">Chat</span>
+            </a>
+          </li>
+        </ul>
+        <svg
+          id="button-menu-responsive"
+          class="button-menu-responsive"
+          width="50"
+          hight="50"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          stroke="#f60"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+        >
+          <path d="M5.143 7.429h13.714M5.14 12h13.712M5.143 16.571h13.709" />
+        </svg>
+        <section id="hidden-menu" class="hidden-menu">
+          <article class="flex flex__sp-btw">
+            <svg class="image-holder"></svg>
+            <div>
+              <a href="#" class="user-name"><h4>UserName</h4></a>
+              <span>See profile</span>
+            </div>
+          </article>
+          <article class="hidden-menu-links">
+            <ul class="menu-container">
+              <li>
+                <div class="flex flex__sp-btw flex__item-center">
+                  <div id="dark-mode" class="menu-dark-mode__bg">
+                    <div
+                      id="dark-mode__button"
+                      class="menu-dark-mode__button"
+                    ></div>
+                  </div>
+                  <span class="width__md">Dark Mode</span>
+                </div>
+              </li>
+              <li>
+                <a href="" class="flex flex__sp-btw flex__item-center">
+                  <svg class="image-holder__small"></svg>
+                  <span class="width__md">Settings and Privacy</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="flex flex__sp-btw flex__item-center">
+                  <svg class="image-holder__small"></svg>
+                  <span class="width__md"
+                    >Helps center and recommendations</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </article>
+          <article class="hidden-menu-footer">
+            <div class="footer">
+              <a href="./main.html">About</a>
+              <a href="#">Privacy</a>
+              <a href="#">Cookies</a>
+              <a href="#">Help Center</a>
+              <a href="#">Contact Us</a>
+              <a href="#">No Copyright</a>
+            </div>
+          </article>
+        </section>
+        <svg id="profile-img" class="image-holder profile-image"></svg>
+      </nav>
+    </header>
+    <main class="main flex__column flex__item-center">
+      <h2>FriendList</h2>
+      <h4>Never forget to say hello!</h4>
+      <div class="container">
+        <article class="container">
+          <img src="../assets/postImages/minecraftMeme.jpg" class="width__md" alt="">
+          <div class="">
+            <h4>Name</h4>
+            <div class="container">
+              <button>Accept</button>
+              <button>Decline</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
   </body>
 </html>
