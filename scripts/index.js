@@ -1,5 +1,6 @@
 import displayFriend from "./components/friend.js";
 import createPost from "./components/post.js";
+import createMenuItem from "./components/menuItem.js";
 
 import { getUsers, getUser } from "./functions/fetchUsers.js";
 import { getPost } from "./functions/fetchPosts.js";
@@ -25,6 +26,24 @@ const hamburgerButtonRight = document.querySelector(
 
 hamburgerButtonRight.addEventListener("click", () => {
   menuRight.classList.toggle("show-menu-left");
+});
+
+//Right Menu display items
+
+const menuRightItems = [
+  "Friends",
+  "Saved",
+  "Watch",
+  "Notifications",
+  "Settings and Privacy",
+];
+
+const menuRightContainer = document.getElementById("menu-right-container");
+
+menuRightItems.forEach((el) => {
+  const item = createMenuItem(false, el);
+
+  menuRightContainer.appendChild(item);
 });
 
 //Generate default Post
