@@ -71,8 +71,8 @@ const postWrapper = document.getElementById("post-container");
 
 const postDefault = createPost(
   0,
+  "quispechilojorge@gmail.com",
   "Jorge Luis",
-  "CodeLover",
   "This is an example on how a post should look like",
   "../assets/postImages/minecraftMeme.jpg"
 );
@@ -98,8 +98,8 @@ loadMorePost.addEventListener("click", () => {
     getUser(post.userId).then((el) => {
       const newPost = createPost(
         postId,
+        el.email,
         el.name,
-        el.username,
         clearSpaces(post.body)
       );
       postWrapper.appendChild(newPost);

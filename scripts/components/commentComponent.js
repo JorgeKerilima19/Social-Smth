@@ -9,9 +9,16 @@ export default function commentComponent(userName, content) {
   const userEmail = document.createElement("span");
   const commentContent = document.createElement("p");
 
-  container.classList.add("flex", "flex__gap-sm");
-  infoContainer.style.width="90%"
-  infoContainer.style.fontSize="0.9em"
+  container.classList.add(
+    "flex",
+    "flex__gap-sm",
+    "border__radius-sm",
+    "container__bg-main",
+    "pd-sm"
+  );
+  infoContainer.style.width = "90%";
+  infoContainer.style.fontSize = "0.9em";
+  userEmail.style.fontWeight = "bold";
 
   userEmail.innerText = userName;
   commentContent.innerText = content;

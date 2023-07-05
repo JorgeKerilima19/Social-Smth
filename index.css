@@ -161,7 +161,10 @@ a {
 .border__radius-sm {
   border-radius: 0.5rem;
 }
-.cursor__pointer{
+.container__bg-main {
+  background-color: var(--bg-color-secondary);
+}
+.cursor__pointer {
   cursor: pointer;
 }
 .pd-left__md {

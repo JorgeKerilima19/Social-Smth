@@ -6,13 +6,21 @@ import commentComponent from "./commentComponent.js";
 
 export default function commentSection(postId, numberComments) {
   const container = document.createElement("div");
-  container.classList.add("flex", "flex__column", "height__min-sm","flex__gap-md");
+  container.classList.add(
+    "flex",
+    "flex__column",
+    "height__min-sm",
+    "flex__gap-md"
+  );
   if (postId) {
     if (numberComments > 0) {
       getComments(postId).then((comments) => {
-        comments.forEach((el) => {
-          const comment = commentComponent(el.email, clearSpaces(el.body));
-          container.appendChild(comment);
+        comments.forEach((el, index) => {
+          if (index < numberComments) {
+            const comment = commentComponent(el.email, clearSpaces(el.body));
+            container.appendChild(comment);
+          }
+          return;
         });
       });
     } else {
