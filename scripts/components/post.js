@@ -1,6 +1,6 @@
 import { randomNumber } from "../functions/randomNumber.js";
 import SVG from "./commonComponents/SVG.js";
-//General Variables
+import postContainer from "./commonComponents/postContainer.js";
 
 export default function createPost(
   username,
@@ -9,13 +9,8 @@ export default function createPost(
   postImage = false
 ) {
   //main Container
-  const postContainer = document.createElement("article");
-  postContainer.classList.add(
-    "post__container",
-    "flex",
-    "flex__column",
-    "flex__gap-sm"
-  );
+
+  const mainPostContainer = postContainer.cloneNode(true);
 
   //Post AuthorInfo
 
@@ -137,6 +132,16 @@ export default function createPost(
     const interactionDescription = document.createElement("span");
 
     interactionDescription.innerText = el;
+    container.classList.add(
+      "to-hover",
+      "pd-sm",
+      "border__radius-sm",
+      "cursor__pointer"
+    );
+
+    if (el === "Comment") {
+      container.classList.add("comment-button");
+    }
 
     container.appendChild(interactionSVG);
     container.appendChild(interactionDescription);
@@ -149,8 +154,8 @@ export default function createPost(
   postContentContainer.appendChild(postReactions);
   postContentContainer.appendChild(postInteractions);
 
-  postContainer.appendChild(authorInfo);
-  postContainer.appendChild(postContentContainer);
+  mainPostContainer.appendChild(authorInfo);
+  mainPostContainer.appendChild(postContentContainer);
 
-  return postContainer;
+  return mainPostContainer;
 }

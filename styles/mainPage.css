@@ -1,7 +1,6 @@
 [class^="main__container"] {
   min-width: 25%;
   height: max(20rem, 80vh);
-  background-color: var(--container-color);
   overflow-y: auto;
 }
 [class^="main__container"]::-webkit-scrollbar {

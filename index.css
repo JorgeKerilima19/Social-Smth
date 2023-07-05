@@ -13,9 +13,9 @@ body {
   color: var(--font-color);
 }
 body.dark-mode {
-  --bg-color-secondary: hsl(0, 0%, 15%);
+  --bg-color-secondary: hsl(0, 0%, 11%);
   --border-color: hsl(0, 0%, 82%);
-  --container-color: hsl(0, 0%, 21%);
+  --container-color: hsl(0, 0%, 25%);
   --font-color: hsl(0, 0%, 100%);
   --font-color-optional: hsl(0, 0%, 0%);
 }
@@ -157,6 +157,12 @@ a {
   background-color: var(--border-color);
   bottom: -0.2rem;
   position: absolute;
+}
+.border__radius-sm {
+  border-radius: 0.5rem;
+}
+.cursor__pointer{
+  cursor: pointer;
 }
 .pd-left__md {
   padding-left: 1rem;
@@ -309,6 +315,15 @@ a {
   display: flex;
   align-items: center;
   gap: 1rem;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.menu__item-link:hover {
+  background-color: var(--container-color);
+}
+.to-hover:hover {
+  background-color: var(--bg-color-body);
 }
 .menu-dark-mode__bg {
   width: 3em;
@@ -319,7 +334,7 @@ a {
 .menu-dark-mode__button {
   width: 1.4em;
   height: 1.4em;
-  background-color: var(--font-color-optional);
+  background-color: white;
   border-radius: 0.8rem;
   transition: 0.3s;
 }

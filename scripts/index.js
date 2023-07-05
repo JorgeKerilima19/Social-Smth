@@ -84,6 +84,7 @@ const postDefault1 = createPost(
 );
 postWrapper.appendChild(postDefault);
 postWrapper.appendChild(postDefault1);
+
 //Generate more Posts
 
 const loadMorePost = document.getElementById("load-more-button");
