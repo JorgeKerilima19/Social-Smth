@@ -69,6 +69,9 @@
 .main__container-right {
   padding: 1rem 0.8rem;
 }
+.height__min-sm {
+  height: 2em;
+}
 @media (max-width: 500px) {
   .post__container {
     width: 100%;

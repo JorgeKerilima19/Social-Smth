@@ -1,8 +1,12 @@
-import { randomNumber } from "../functions/randomNumber.js";
+import { randomNumber, randomNumber5 } from "../functions/randomNumber.js";
+
 import SVG from "./commonComponents/SVG.js";
 import postContainer from "./commonComponents/postContainer.js";
 
+import commentSection from "./commentSection.js";
+
 export default function createPost(
+  postId = 0,
   username,
   nickname,
   postContent,
@@ -102,6 +106,8 @@ export default function createPost(
 
   const reactions = ["Reaction", "Comment", "Share"];
 
+  let commentsNumber;
+
   const reactionContainer = document.createElement("div");
   reactionContainer.classList.add("flex", "flex__gap-sm", "flex__item-center");
   reactions.forEach((el) => {
@@ -109,7 +115,15 @@ export default function createPost(
     const reactionNumber = document.createElement("span");
     const reactionDescription = document.createElement("span");
 
-    const number = randomNumber();
+    let number;
+
+    if (el === "Comment") {
+      number = randomNumber5();
+      commentsNumber = number;
+    } else {
+      number = randomNumber();
+    }
+
     reactionNumber.innerText = number;
     number < 2 && number > 0
       ? (reactionDescription.innerText = el)
@@ -119,6 +133,7 @@ export default function createPost(
     container.appendChild(reactionDescription);
     postReactions.appendChild(container);
   });
+  console.log(commentsNumber);
 
   //Post Interactions
 
@@ -139,8 +154,18 @@ export default function createPost(
       "cursor__pointer"
     );
 
+    function handleClick() {
+      const commentsContainer = postId
+        ? commentSection(commentsNumber)
+        : commentSection(0);
+      mainPostContainer.appendChild(commentsContainer);
+
+      container.removeEventListener("click", handleClick);
+    }
+
     if (el === "Comment") {
       container.classList.add("comment-button");
+      container.addEventListener("click", handleClick);
     }
 
     container.appendChild(interactionSVG);

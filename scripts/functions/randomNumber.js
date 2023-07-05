@@ -9,3 +9,8 @@ export function randomNumber100() {
 
   return number;
 }
+export function randomNumber5() {
+  const number = Math.floor(Math.random() * 5) + 1;
+
+  return number;
+}

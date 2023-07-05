@@ -70,12 +70,14 @@ menuRightItems.forEach((el) => {
 const postWrapper = document.getElementById("post-container");
 
 const postDefault = createPost(
+  0,
   "Jorge Luis",
   "CodeLover",
   "This is an example on how a post should look like",
   "../assets/postImages/minecraftMeme.jpg"
 );
 const postDefault1 = createPost(
+  0,
   "Ervin Howell",
   "Antonette",
   clearSpaces(
@@ -94,7 +96,12 @@ loadMorePost.addEventListener("click", () => {
 
   getPost(postId).then((post) => {
     getUser(post.userId).then((el) => {
-      const newPost = createPost(el.name, el.username, clearSpaces(post.body));
+      const newPost = createPost(
+        postId,
+        el.name,
+        el.username,
+        clearSpaces(post.body)
+      );
       postWrapper.appendChild(newPost);
     });
   });
