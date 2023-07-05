@@ -133,7 +133,6 @@ export default function createPost(
     container.appendChild(reactionDescription);
     postReactions.appendChild(container);
   });
-  console.log(commentsNumber);
 
   //Post Interactions
 
@@ -156,8 +155,8 @@ export default function createPost(
 
     function handleClick() {
       const commentsContainer = postId
-        ? commentSection(commentsNumber)
-        : commentSection(0);
+        ? commentSection(postId, commentsNumber)
+        : commentSection((postId = 1), commentsNumber);
       mainPostContainer.appendChild(commentsContainer);
 
       container.removeEventListener("click", handleClick);
