@@ -3,9 +3,117 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../index.css" />
     <title>Watch</title>
   </head>
   <body>
-    <h2>HELLO WATCH</h2>
+    <header class="header">
+      <a href="./main.html">
+        <img
+          class="nav-logo__alternative"
+          src="../assets/logos/alternativeLogo.svg"
+          alt="alternativeLogo"
+        />
+        <img
+          class="nav-log"
+          src="../assets/logos/mainLogo.svg"
+          alt="MainLogo"
+        />
+      </a>
+      <nav class="header__nav">
+        <ul class="header__nav__navbar">
+          <li class="navbar-item">
+            <a class="navbar-item__link" href="#">
+              <img
+                src="../assets/svg/chat.svg"
+                class="navbar-item__link-svg"
+                alt="chatImage"
+              />
+              <span class="navbar-item__text">Chat</span>
+            </a>
+          </li>
+        </ul>
+        <svg
+          id="button-menu-responsive"
+          class="button-menu-responsive"
+          width="50"
+          hight="50"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          stroke="#f60"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+        >
+          <path d="M5.143 7.429h13.714M5.14 12h13.712M5.143 16.571h13.709" />
+        </svg>
+        <section id="hidden-menu" class="hidden-menu">
+          <article class="flex flex__sp-btw">
+            <svg class="image-holder"></svg>
+            <div>
+              <a href="#" class="user-name"><h4>UserName</h4></a>
+              <span>See profile</span>
+            </div>
+          </article>
+          <article class="hidden-menu-links">
+            <ul class="menu-container">
+              <li>
+                <div class="flex flex__sp-btw flex__item-center">
+                  <div id="dark-mode" class="menu-dark-mode__bg">
+                    <div
+                      id="dark-mode__button"
+                      class="menu-dark-mode__button"
+                    ></div>
+                  </div>
+                  <span class="width__md">Dark Mode</span>
+                </div>
+              </li>
+              <li>
+                <a href="" class="menu__item-link flex__sp-btw">
+                  <svg class="image-holder__small"></svg>
+                  <span class="width__md">Settings and Privacy</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="menu__item-link flex__sp-btw">
+                  <svg class="image-holder__small"></svg>
+                  <span class="width__md"
+                    >Helps center and recommendations</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </article>
+          <article class="hidden-menu-footer">
+            <div class="footer">
+              <a href="./main.html">About</a>
+              <a href="#">Privacy</a>
+              <a href="#">Cookies</a>
+              <a href="#">Help Center</a>
+              <a href="#">Contact Us</a>
+              <a href="#">No Copyright</a>
+            </div>
+          </article>
+        </section>
+        <svg id="profile-img" class="image-holder profile-image"></svg>
+      </nav>
+      <div id="hamburger-btn__menu-right" class="hamburger-btn">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </header>
+    <main class="main flex__column flex__item-center">
+      <h2>There is always something to watch!</h2>
+      <div class="flex flex__wrap">
+        <article class="container__card">
+          <div>author info</div>
+          <div>Post content</div>
+          <div>reactions</div>
+        </article>
+      </div>
+    </main>
+    <script src="../scripts/navBar.js" type="module"></script>
   </body>
 </html>
