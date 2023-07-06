@@ -1,10 +1,25 @@
-export default function friendCard(profileImage, username) {
+const linksArray = [
+  "https://picsum.photos/200/300",
+  "https://picsum.photos/400/300",
+  "https://picsum.photos/400/400",
+  "https://picsum.photos/300/500",
+  "https://picsum.photos/500/500",
+  "https://picsum.photos/500/600",
+  "https://picsum.photos/400/500",
+  "https://picsum.photos/500/300",
+  "https://picsum.photos/300/300",
+  "https://picsum.photos/300/200",
+];
+
+export default function friendCard(username) {
   const cardContainer = document.createElement("article");
 
   const cardImage = document.createElement("img");
   const cardInfoContainer = document.createElement("div");
 
-  cardImage.src = profileImage;
+  cardImage.src = linksArray[0];
+
+  linksArray.shift();
 
   const userName = document.createElement("h4");
   const cardInteractions = document.createElement("div");
