@@ -64,7 +64,7 @@ a {
 .container__card__image {
   width: 100%;
   height: 10rem;
-  object-fit: cover ;
+  object-fit: cover;
 }
 .menu-container {
   list-style: none;
@@ -195,6 +195,18 @@ a {
 }
 .pd-sm {
   padding: 0.5rem;
+}
+.user__image-sm {
+  height: 3rem;
+  width: 3rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.user__image-smaller {
+  height: 2rem;
+  width: 2rem;
+  object-fit: cover;
+  border-radius: 50%;
 }
 .hamburger-btn {
   display: none;
@@ -343,7 +355,7 @@ a {
   cursor: pointer;
 }
 .menu__item-link:hover {
-  background-color: var(--container-color);
+  background-color: var(--bg-color-body);
 }
 .to-hover:hover {
   background-color: var(--bg-color-body);

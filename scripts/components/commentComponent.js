@@ -1,9 +1,16 @@
-import SVG from "./commonComponents/SVG.js";
+import {staticArray} from "../helpers/linksArray.js";
+import { randomNumber5 } from "../functions/randomNumber.js";
 
 export default function commentComponent(userName, content) {
   const container = document.createElement("div");
 
-  const userImage = SVG.cloneNode(true);
+  const userImage = document.createElement("img");
+
+  const imageId = randomNumber5();
+
+  userImage.src = staticArray[imageId];
+
+  userImage.classList.add("user__image-smaller");
 
   const infoContainer = document.createElement("div");
   const userEmail = document.createElement("span");
