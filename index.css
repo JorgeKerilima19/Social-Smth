@@ -178,6 +178,9 @@ a {
 .bg__primary {
   background-color: var(--bg-color-body);
 }
+.color-text{
+  color: var(--font-color);
+}
 .container__bg-main {
   background-color: var(--bg-color-secondary);
 }
