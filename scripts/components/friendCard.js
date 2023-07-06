@@ -11,7 +11,7 @@ const linksArray = [
   "https://picsum.photos/300/200",
 ];
 
-export default function friendCard(username) {
+export default function friendCard(username, userContact) {
   const cardContainer = document.createElement("article");
 
   const cardImage = document.createElement("img");
@@ -22,9 +22,11 @@ export default function friendCard(username) {
   linksArray.shift();
 
   const userName = document.createElement("h4");
+  const userEmail = document.createElement("h5");
   const cardInteractions = document.createElement("div");
 
   userName.innerText = username;
+  userEmail.innerText = userContact;
 
   const textButton = document.createElement("button");
   const removeButton = document.createElement("button");
@@ -50,6 +52,7 @@ export default function friendCard(username) {
   cardInteractions.appendChild(removeButton);
 
   cardInfoContainer.appendChild(userName);
+  cardInfoContainer.appendChild(userEmail);
   cardInfoContainer.appendChild(cardInteractions);
 
   cardContainer.appendChild(cardImage);

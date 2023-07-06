@@ -1,11 +1,12 @@
 import friendCard from "./components/friendCard.js";
+import { getUsers } from "./functions/fetchUsers.js";
 
 const friendContainer = document.getElementById("friendList-container");
 
-const newFriend = friendCard("Jose");
-const newFriend1 = friendCard("Jose");
-const newFriend2 = friendCard("Jose");
+getUsers().then((friends) => {
+  friends.forEach((el) => {
+    const newUser = friendCard(el.name, el.email);
 
-friendContainer.appendChild(newFriend);
-friendContainer.appendChild(newFriend1);
-friendContainer.appendChild(newFriend2);
+    friendContainer.appendChild(newUser);
+  });
+});
