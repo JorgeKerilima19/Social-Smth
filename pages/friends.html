@@ -108,23 +108,33 @@
     <main class="main flex__column flex__item-center">
       <h2>FriendList</h2>
       <h4>Never forget to say hello!</h4>
-      <div class="container">
-        <article class="container">
+      <div
+        id="friendList-container"
+        class="flex flex__gap-md flex__wrap width__full pd-sm flex__sp-center"
+      >
+        <article
+          class="container container__card container__bg-container pd-sm border__radius-sm"
+        >
           <img
             src="../assets/postImages/minecraftMeme.jpg"
-            class="width__md"
+            class="container__card__image"
             alt=""
           />
-          <div class="">
+          <div class="width__full container flex__gap-md">
             <h4>Name</h4>
-            <div class="container">
-              <button>Accept</button>
-              <button>Decline</button>
+            <div class="flex flex__gap-sm width__full">
+              <button class="width__full border__radius-sm bg__primary">
+                Text Friend
+              </button>
+              <button class="width__full border__radius-sm">
+                Remove Friend
+              </button>
             </div>
           </div>
         </article>
       </div>
     </main>
     <script src="../scripts/navBar.js"></script>
+    <script src="../scripts/friendPage.js" type="module"></script>
   </body>
 </html>
