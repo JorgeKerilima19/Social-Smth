@@ -91,6 +91,12 @@
                   >
                 </a>
               </li>
+              <li>
+                <a href="/index.html" class="menu__item-link flex__sp-btw">
+                  <svg class="image-holder__small"></svg>
+                  <span class="width__md">Log Out</span>
+                </a>
+              </li>
             </ul>
           </article>
           <article class="hidden-menu-footer">
@@ -156,8 +162,9 @@
           </article>
           <article>
             <header>What's new?</header>
-            <form class="container" action="">
+            <form id="create-post" class="container flex__gap-md" action="">
               <textarea
+                id="write-post-textarea"
                 class="text-area"
                 placeholder="Type something"
               ></textarea>
@@ -166,6 +173,7 @@
                 <li><svg class="image-holder__small"></svg></li>
                 <li><svg class="image-holder__small"></svg></li>
               </ul>
+              <button class="pd-sm bg__primary color-text">Create Post</button>
             </form>
           </article>
         </section>

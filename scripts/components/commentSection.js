@@ -24,6 +24,7 @@ export default function commentSection(postId, numberComments) {
         });
       });
     } else {
+      container.classList.add("flex__item-center");
       container.innerText = "Be the first one to comment";
     }
   } else {

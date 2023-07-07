@@ -7,6 +7,10 @@ import clearSpaces from "./functions/clearSpaces.js";
 
 import { randomNumber100 } from "./functions/randomNumber.js";
 
+//Posts container
+
+const postWrapper = document.getElementById("post-container");
+
 // Post creating privacy
 
 const select = document.querySelector("#select");
@@ -16,9 +20,26 @@ select.addEventListener("change", () => {
   privateConfig.innerText = select.value;
 });
 
-//Generate default Post
+//Write / create a post
 
-const postWrapper = document.getElementById("post-container");
+const form = document.getElementById("create-post");
+const textarea = document.getElementById("write-post-textarea");
+
+let postContent = "";
+
+textarea.addEventListener("input", (e) => {
+  postContent = e.target.value;
+});
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const newPost = createPost(0, "userEmail@gmail.com", "Username", postContent);
+  const firstPost = postWrapper.firstChild;
+
+  postWrapper.insertBefore(newPost, firstPost);
+});
+
+//Generate default Post
 
 const postDefault = createPost(
   0,
