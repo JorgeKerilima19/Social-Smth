@@ -178,7 +178,7 @@ a {
 .bg__primary {
   background-color: var(--bg-color-body);
 }
-.color-text{
+.color-text {
   color: var(--font-color);
 }
 .container__bg-main {
@@ -198,6 +198,21 @@ a {
 }
 .pd-sm {
   padding: 0.5rem;
+}
+.user__active,
+.user__offline {
+  height: 0.8rem;
+  width: 0.8rem;
+  border-radius: 50%;
+  left: 70%;
+  top: 0;
+  position: absolute;
+}
+.user__active {
+  background-color: rgb(33, 224, 33);
+}
+.user__offline {
+  background-color: rgb(197, 194, 194);
 }
 .user__image-sm {
   height: 3rem;

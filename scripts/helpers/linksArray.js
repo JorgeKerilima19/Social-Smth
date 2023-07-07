@@ -16,5 +16,6 @@ export const staticArray = [
   "https://picsum.photos/400/400",
   "https://picsum.photos/300/500",
   "https://picsum.photos/500/500",
+  "https://picsum.photos/500/600",
 ];
 export default linksArray;
