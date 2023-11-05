@@ -61,6 +61,10 @@ a {
 .container__card {
   width: min(20rem, 100%);
 }
+.container__card-giant {
+  width: min(40rem, 100%);
+  min-height: 4rem;
+}
 .container__card__image {
   width: 100%;
   height: 10rem;
@@ -377,6 +381,12 @@ a {
 }
 .to-hover:hover {
   background-color: var(--bg-color-body);
+}
+
+.to-hover:hover > svg {
+  transition: filter 0.2s;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(142deg)
+    brightness(105%) contrast(102%);
 }
 .menu-dark-mode__bg {
   width: 3em;

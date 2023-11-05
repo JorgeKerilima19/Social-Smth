@@ -138,14 +138,47 @@ export default function createPost(
 
   const postInteractions = document.createElement("section");
 
-  const interactions = ["Like", "Comment", "Share"];
+  const interactions = [
+    {
+      name: "Like",
 
-  interactions.forEach((el) => {
+      svgPath: "../../assets/svg/like.svg",
+    },
+    {
+      name: "Comment",
+
+      svgPath: "../../assets/svg/comment.svg",
+    },
+    {
+      name: "Share",
+
+      svgPath: "../../assets/svg/share.svg",
+    },
+  ];
+
+  interactions.forEach((el, index) => {
     const container = reactionContainer.cloneNode(true);
-    const interactionSVG = SVG.cloneNode(true);
+    const imgSvg = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "svg"
+    );
+    const useTag = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "use"
+    );
+
+    useTag.setAttribute(
+      "href",
+      `${el.svgPath + "#interaction-" + (index + 1)}`
+    );
+
+    imgSvg.appendChild(useTag);
+
+    imgSvg.classList.add("svg-container__small","interaction");
+
     const interactionDescription = document.createElement("span");
 
-    interactionDescription.innerText = el;
+    interactionDescription.innerText = el.name;
     container.classList.add(
       "to-hover",
       "pd-sm",
@@ -162,12 +195,12 @@ export default function createPost(
       container.removeEventListener("click", handleClick);
     }
 
-    if (el === "Comment") {
+    if (el.name === "Comment") {
       container.classList.add("comment-button");
       container.addEventListener("click", handleClick);
     }
 
-    container.appendChild(interactionSVG);
+    container.appendChild(imgSvg);
     container.appendChild(interactionDescription);
     postInteractions.appendChild(container);
   });
