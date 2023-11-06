@@ -1,23 +1,27 @@
-import linksArray from "../helpers/linksArray.js";
+import friendsPhoto from "../helpers/photoLinkList.js";
 
-function displayFriend(nameFriend, status = false) {
+function displayFriend(nameFriend, status = false, index = 1) {
   const container = document.createElement("li");
   const containerLink = document.createElement("a");
   const friendImageContainer = document.createElement("div");
   const friendImage = document.createElement("img");
   const friendStatus = document.createElement("div");
 
-  friendImage.src = linksArray[0];
-  friendImage.classList.add("user__image-sm");
+  //defining user friendImg
 
-  linksArray.shift();
+  const friendPhotoLink = friendsPhoto.filter((el) => el.id === index + 1);
+
+  friendImage.src = friendPhotoLink[0]
+    ? friendPhotoLink[0].src
+    : friendsPhoto[friendsPhoto.length - 1].src;
+  friendImage.classList.add("user__image-sm");
 
   const friendName = document.createElement("span");
 
   friendName.innerText = nameFriend;
 
   friendImageContainer.style.position = "relative";
-  
+
   status
     ? friendStatus.classList.add("user__active")
     : friendStatus.classList.add("user__offline");

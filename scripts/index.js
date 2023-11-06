@@ -87,15 +87,17 @@ const offlineFriendsContainer = document.getElementById("offline-friends");
 getUsers().then((users) => {
   const onlineFriendList = document.createDocumentFragment();
   const offlineFriendList = document.createDocumentFragment();
-  users.forEach((el) => {
+
+  users.forEach((el, index) => {
     if (el.id % 2 === 0) {
-      const friend = displayFriend(el.name, true);
+      const friend = displayFriend(el.name, true, index);
       onlineFriendList.appendChild(friend);
     } else {
-      const friend = displayFriend(el.name);
+      const friend = displayFriend(el.name, false, index);
       offlineFriendList.appendChild(friend);
     }
   });
+
   offlineFriendsContainer.appendChild(offlineFriendList);
   onlineFriendsContainer.appendChild(onlineFriendList);
 });

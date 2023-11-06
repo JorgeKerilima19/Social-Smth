@@ -87,8 +87,10 @@ const menuRightItems = [
 
 const menuRightContainer = document.getElementById("menu-right-container");
 
-menuRightItems.forEach((el) => {
-  const item = createMenuItem(el.itemImage, el.itemTitle, el.itemTo);
+if (menuRightContainer) {
+  menuRightItems.forEach((el) => {
+    const item = createMenuItem(el.itemImage, el.itemTitle, el.itemTo);
 
-  menuRightContainer.appendChild(item);
-});
+    menuRightContainer.appendChild(item);
+  });
+}

@@ -1,6 +1,5 @@
 import { randomNumber, randomNumber5 } from "../functions/randomNumber.js";
 
-import SVG from "./commonComponents/SVG.js";
 import postContainer from "./commonComponents/postContainer.js";
 
 import commentSection from "./commentSection.js";
