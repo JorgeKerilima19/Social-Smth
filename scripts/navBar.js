@@ -51,10 +51,15 @@ const hamburgerButtonRight = document.querySelector(
   "#hamburger-btn__menu-right"
 );
 
-hamburgerButtonRight.addEventListener("click", () => {
-  menuRight.classList.toggle("show-menu-left");
-});
-
+console.log(menuRight);
+console.log(hamburgerButtonRight.classList);
+if (menuRight) {
+  hamburgerButtonRight.addEventListener("click", () => {
+    menuRight.classList.toggle("show-menu-left");
+  });
+} else {
+  hamburgerButtonRight.style.display = "none";
+}
 //Left Menu display items
 
 const menuRightItems = [
