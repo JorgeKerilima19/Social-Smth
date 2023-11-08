@@ -8,8 +8,14 @@ export default function createMenuItem(
   const liContainer = document.createElement("li");
   const aContainer = document.createElement("a");
   aContainer.href = to;
+  
+  aContainer.classList.add("to-hover");
+
   const logo = itemLogo ? document.createElement("img") : SVG.cloneNode(true);
-  itemLogo ? (itemLogo.src = itemLogo) : "";
+  if (itemLogo) {
+    logo.src = itemLogo;
+    logo.classList.add("menu-left__item-logo");
+  }
   const text = document.createElement("span");
   text.innerText = itemText;
 

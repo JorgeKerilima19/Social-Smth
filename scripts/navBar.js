@@ -55,37 +55,37 @@ hamburgerButtonRight.addEventListener("click", () => {
   menuRight.classList.toggle("show-menu-left");
 });
 
-//Right Menu display items
+//Left Menu display items
 
 const menuRightItems = [
   {
     itemTitle: "Friends",
-    itemImage: false,
+    itemImage: "../assets/svg/friends.svg",
     itemTo: "../pages/friends.html",
   },
   {
     itemTitle: "Saved",
-    itemImage: false,
+    itemImage: "../assets/svg/save.svg",
     itemTo: "../pages/saved.html",
   },
   {
     itemTitle: "Watch",
-    itemImage: false,
+    itemImage: "../assets/svg/watch.svg",
     itemTo: "../pages/watch.html",
   },
   {
     itemTitle: "Notifications",
-    itemImage: false,
+    itemImage: "../assets/svg/notifications.svg",
     itemTo: "../pages/notifications.html",
   },
   {
     itemTitle: "Settings and Privacy",
-    itemImage: false,
+    itemImage: "../assets/svg/settings.svg",
     itemTo: "../pages/settings.html",
   },
 ];
 
-const menuRightContainer = document.getElementById("menu-right-container");
+const menuRightContainer = document.getElementById("menu-left-container");
 
 if (menuRightContainer) {
   menuRightItems.forEach((el) => {

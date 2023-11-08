@@ -21,6 +21,13 @@
   display: flex;
   justify-content: space-around;
 }
+.menu-left__item-logo {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  filter: invert(63%) sepia(64%) saturate(6523%) hue-rotate(1deg)
+    brightness(102%) contrast(103%);
+}
 .form__input-container {
   display: flex;
 }
