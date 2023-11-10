@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Andika&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../styles/mainPage.css" />
     <link rel="stylesheet" href="../index.css" />
     <title>Social Unknown</title>
   </head>
@@ -110,17 +111,41 @@
         <span class="bar"></span>
       </div>
     </header>
-    <main class="main flex__column flex__item-center">
-      <h2>FriendList</h2>
-      <h4>Never forget to say hello!</h4>
-      <div
-        id="friendList-container"
-        class="flex flex__gap-md flex__wrap width__full pd-sm flex__sp-center"
+    <main class="main flex__item-center">
+      <section
+        id="menu-right"
+        class="main__container-left flex__container pd-md"
       >
-        <!------------
-          Friend List goes here
-        -------------->
-      </div>
+        <ul id="menu-left-container" class="menu-container">
+          <!---------
+          
+          Menu Items go here
+          
+        -------->
+        </ul>
+        <article class="menu-container">
+          <h2>Search</h2>
+          <div class="menu-container container">
+            <svg class="image-holder"></svg>
+            <form class="form__input-container">
+              <input type="text" class="form__input" />
+              <button type="submit" class="form__button">Search</button>
+            </form>
+          </div>
+        </article>
+      </section>
+      <section class="main__container flex__container flex__item-center">
+        <h2>FriendList</h2>
+        <h4>Never forget to say hello!</h4>
+        <div
+          id="friendList-container"
+          class="flex flex__gap-md flex__wrap width__full pd-sm flex__sp-center"
+        >
+          <!------------
+            Friend List goes here
+          -------------->
+        </div>
+      </section>
     </main>
     <script src="../scripts/navBar.js" type="module"></script>
     <script src="../scripts/friendPage.js" type="module"></script>

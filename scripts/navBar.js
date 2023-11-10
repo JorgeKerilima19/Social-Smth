@@ -44,15 +44,13 @@ if (localStorage.getItem("theme") == "light") {
   localStorage.setItem("theme", "light");
 }
 
-//responsive right menu
+//responsive left menu
 
 const menuRight = document.querySelector("#menu-right");
 const hamburgerButtonRight = document.querySelector(
   "#hamburger-btn__menu-right"
 );
 
-console.log(menuRight);
-console.log(hamburgerButtonRight.classList);
 if (menuRight) {
   hamburgerButtonRight.addEventListener("click", () => {
     menuRight.classList.toggle("show-menu-left");
