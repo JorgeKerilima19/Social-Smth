@@ -1,20 +1,25 @@
-import linksArray from "../helpers/linksArray.js";
+import friendsPhoto from "../helpers/photoLinkList.js";
 
-export default function friendCard(username, userContact) {
+export default function friendCard(user, userContact, index) {
   const cardContainer = document.createElement("article");
 
   const cardImage = document.createElement("img");
   const cardInfoContainer = document.createElement("div");
 
-  cardImage.src = linksArray[0];
+  const friendPhotoLink = friendsPhoto.filter((el) => el.id == index + 1);
 
-  linksArray.shift();
+  console.log(friendPhotoLink);
+
+  cardImage.src = friendPhotoLink[0]
+    ? friendPhotoLink[0].src
+    : friendsPhoto[friendsPhoto.length - 1].src;
+  cardImage.classList.add("user__image");
 
   const userName = document.createElement("h4");
   const userEmail = document.createElement("h5");
   const cardInteractions = document.createElement("div");
 
-  userName.innerText = username;
+  userName.innerText = user.name;
   userEmail.innerText = userContact;
 
   const textButton = document.createElement("button");

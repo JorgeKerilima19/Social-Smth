@@ -1,5 +1,8 @@
 import createMenuItem from "./components/menuItem.js";
 
+const header = document.querySelector("#header");
+
+console.log(header);
 //Show user menu
 
 const userImage = document.querySelector("#profile-img");

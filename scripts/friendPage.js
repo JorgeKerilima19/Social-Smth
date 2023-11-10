@@ -4,8 +4,8 @@ import { getUsers } from "./functions/fetchUsers.js";
 const friendContainer = document.getElementById("friendList-container");
 
 getUsers().then((friends) => {
-  friends.forEach((el) => {
-    const newUser = friendCard(el.name, el.email);
+  friends.forEach((user, index) => {
+    const newUser = friendCard(user, user.email, index);
 
     friendContainer.appendChild(newUser);
   });
