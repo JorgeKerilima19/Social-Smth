@@ -8,8 +8,6 @@ export default function friendCard(user, userContact, index) {
 
   const friendPhotoLink = friendsPhoto.filter((el) => el.id == index + 1);
 
-  console.log(friendPhotoLink);
-
   cardImage.src = friendPhotoLink[0]
     ? friendPhotoLink[0].src
     : friendsPhoto[friendsPhoto.length - 1].src;

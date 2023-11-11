@@ -282,15 +282,9 @@ a {
   display: flex;
   align-items: center;
 }
-.nav-log,
-.nav-logo__alternative {
+.logo-container img {
   height: calc(var(--header-height) - 1rem);
-}
-.nav-logo__alternative {
-  display: none;
-}
-.logo:hover {
-  height: 4.5rem;
+  width: auto;
 }
 
 .header__nav {

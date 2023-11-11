@@ -1,9 +1,11 @@
 import createMenuItem from "./components/menuItem.js";
+import NavbarComponent from "./components/navbar.js";
 
-const header = document.querySelector("#header");
 
-console.log(header);
-//Show user menu
+
+//Navbar
+
+NavbarComponent();
 
 const userImage = document.querySelector("#profile-img");
 const showMenu = document.querySelector("#hidden-menu");
