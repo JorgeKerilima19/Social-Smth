@@ -1,3 +1,9 @@
+const navRoutes = [
+  { itemlogo: "/assets/svg/chat.svg", name: "ROute1", to: "#" },
+  { itemlogo: "/assets/svg/watch.svg", name: "ROute1", to: "#" },
+  { itemlogo: "/assets/svg/notifications.svg", name: "ROute1", to: "#" },
+];
+
 export default function NavbarComponent() {
   const header = document.querySelector("#header");
 
@@ -33,12 +39,42 @@ export default function NavbarComponent() {
   appLogo.appendChild(sourceLarge);
   appLogo.appendChild(fallbackImage);
 
-  logoContainer.href="/pages/main.html"
+  logoContainer.href = "/pages/main.html";
   logoContainer.appendChild(appLogo);
 
   logoContainer.classList.add("Xd");
 
   appLogo.classList.add("logo-container");
+
+  //nav-itemList
+
+  const listContainer = document.createElement("ul");
+  listContainer.classList.add("header__nav__navbar");
+
+  //Navbar Items
+  navRoutes.map((item) => {
+    const listItemContainer = document.createElement("li");
+    const ItemLinkContainer = document.createElement("a");
+    const itemImage = document.createElement("img");
+    const itemText = document.createElement("span");
+
+    ItemLinkContainer.appendChild(itemImage);
+    ItemLinkContainer.appendChild(itemText);
+
+    //addons
+    itemImage.src = item.itemlogo;
+    itemText.innerText = item.name;
+
+    //classes
+    listItemContainer.classList.add("navbar-item");
+    ItemLinkContainer.classList.add("navbar-item__link");
+
+    listItemContainer.appendChild(ItemLinkContainer);
+    listContainer.appendChild(listItemContainer);
+  });
+
+  navbarContainer.appendChild(listContainer);
+  navbarContainer.classList.add("header__navs");
 
   //Hamburguer menu
 
