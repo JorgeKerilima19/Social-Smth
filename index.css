@@ -277,6 +277,7 @@ a {
   justify-content: space-between;
   height: var(--header-height);
   padding: 0 1rem;
+  gap: 5rem;
 }
 .header > a {
   display: flex;
@@ -292,7 +293,7 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: max(100%, 20rem);
+  width: max(60%, 20rem);
   padding: 0 1rem;
 }
 .header__nav__navbar {

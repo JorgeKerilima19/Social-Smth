@@ -1,3 +1,5 @@
+import hiddenMenu from "./hiddenMenu.js";
+
 const navRoutes = [
   { itemlogo: "/assets/svg/chat.svg", name: "ROute1", to: "#" },
   { itemlogo: "/assets/svg/watch.svg", name: "ROute1", to: "#" },
@@ -12,7 +14,7 @@ export default function NavbarComponent() {
   const logoContainer = document.createElement("a");
   const navbarContainer = document.createElement("nav");
   const MenuHamburger = document.createElement("div");
-  const hiddenMenu = document.createElement("section");
+  const menuHidden = hiddenMenu();
   const profileImage = document.createElement("div");
 
   //Logos
@@ -80,11 +82,10 @@ export default function NavbarComponent() {
   responsiveNavbar.classList.add("image-holder");
   responsiveNavbar.setAttribute("id", "button-menu-responsive");
 
-  
   navbarContainer.appendChild(listContainer);
   navbarContainer.appendChild(responsiveNavbar);
   navbarContainer.appendChild(profileImage);
-  navbarContainer.appendChild(hiddenMenu);
+  navbarContainer.appendChild(menuHidden);
   navbarContainer.classList.add("header__nav");
 
   //Hamburguer menu
@@ -108,28 +109,14 @@ export default function NavbarComponent() {
 
   navbarContainer.appendChild(buttonResponsive);
 
-  //HiddenMenu
-
-  hiddenMenu.setAttribute("id", "hidden-menu");
-  hiddenMenu.classList.add("hidden-menu");
-
   // userImage
 
   profileImage.setAttribute("id", "profile-img");
 
   profileImage.addEventListener("click", () => {
-    hiddenMenu.classList.toggle("show");
+    menuHidden.classList.toggle("show");
   });
 
-  const darkMode = document.createElement("div");
-  darkMode.setAttribute("id", "dark-mode");
-
-  const darkModeButton = document.createElement("span");
-  darkModeButton.setAttribute("id", "dark-mode__button");
-
-  darkMode.appendChild(darkModeButton);
-
-  hiddenMenu.appendChild(darkMode);
 
   logoContainer.appendChild(appLogo);
 
