@@ -13,6 +13,7 @@ export default function NavbarComponent() {
   const navbarContainer = document.createElement("nav");
   const MenuHamburger = document.createElement("div");
   const hiddenMenu = document.createElement("section");
+  const profileImage = document.createElement("div");
 
   //Logos
   const appLogo = document.createElement("picture");
@@ -64,21 +65,32 @@ export default function NavbarComponent() {
     //addons
     itemImage.src = item.itemlogo;
     itemText.innerText = item.name;
+    profileImage.classList.add("image-holder", "profile-img");
 
     //classes
     listItemContainer.classList.add("navbar-item");
     ItemLinkContainer.classList.add("navbar-item__link");
+    itemText.classList.add("navbar-item__text");
 
     listItemContainer.appendChild(ItemLinkContainer);
     listContainer.appendChild(listItemContainer);
   });
 
+  const responsiveNavbar = document.createElement("svg");
+  responsiveNavbar.classList.add("image-holder");
+  responsiveNavbar.setAttribute("id", "button-menu-responsive");
+
+  
   navbarContainer.appendChild(listContainer);
-  navbarContainer.classList.add("header__navs");
+  navbarContainer.appendChild(responsiveNavbar);
+  navbarContainer.appendChild(profileImage);
+  navbarContainer.appendChild(hiddenMenu);
+  navbarContainer.classList.add("header__nav");
 
   //Hamburguer menu
 
   MenuHamburger.id = "hamburger-btn__menu-right";
+  MenuHamburger.classList.add("hamburger-btn");
 
   Array.from(Array(3)).map(() => {
     const bar = document.createElement("span");
@@ -88,28 +100,26 @@ export default function NavbarComponent() {
 
   //navbar items
 
-  // userImage
-  const userImage = document.createElement("img");
-
-  userImage.setAttribute("id", "profile-img");
-
-  userImage.addEventListener("click", () => {
-    // showMenu.classList.toggle("show");
-    console.log("object");
-  });
-
   // buttonResponsive
   const buttonResponsive = document.createElement("svg");
   buttonResponsive.setAttribute("id", "button-menu-responsive");
 
   //add parents to Navbar
 
-  navbarContainer.appendChild(userImage);
   navbarContainer.appendChild(buttonResponsive);
 
   //HiddenMenu
 
   hiddenMenu.setAttribute("id", "hidden-menu");
+  hiddenMenu.classList.add("hidden-menu");
+
+  // userImage
+
+  profileImage.setAttribute("id", "profile-img");
+
+  profileImage.addEventListener("click", () => {
+    hiddenMenu.classList.toggle("show");
+  });
 
   const darkMode = document.createElement("div");
   darkMode.setAttribute("id", "dark-mode");
@@ -128,5 +138,4 @@ export default function NavbarComponent() {
   header.appendChild(logoContainer);
   header.appendChild(navbarContainer);
   header.appendChild(MenuHamburger);
-  header.appendChild(hiddenMenu);
 }

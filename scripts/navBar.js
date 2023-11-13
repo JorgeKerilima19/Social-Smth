@@ -1,8 +1,6 @@
 import createMenuItem from "./components/menuItem.js";
 import NavbarComponent from "./components/navbar.js";
 
-
-
 //Navbar
 
 NavbarComponent();
@@ -55,6 +53,10 @@ const menuRight = document.querySelector("#menu-right");
 const hamburgerButtonRight = document.querySelector(
   "#hamburger-btn__menu-right"
 );
+if(hamburgerButtonRight){
+  console.log("disply");
+}
+console.log(hamburgerButtonRight);
 
 if (menuRight) {
   hamburgerButtonRight.addEventListener("click", () => {
