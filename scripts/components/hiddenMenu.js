@@ -58,18 +58,17 @@ const hiddenMenu = () => {
 
     optionsContainer.appendChild(container);
   });
-  
+
   darkMode.addEventListener("click", () => {
     darkModeButton.classList.toggle("on");
     document.body.classList.toggle("dark-mode");
-  
+
     if (localStorage.getItem("theme") == "light") {
       localStorage.setItem("theme", "dark");
     } else {
       localStorage.setItem("theme", "light");
     }
   });
-
 
   //parent Elements append
 

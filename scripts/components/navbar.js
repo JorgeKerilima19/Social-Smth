@@ -79,7 +79,7 @@ export default function NavbarComponent() {
   });
 
   const responsiveNavbar = document.createElement("svg");
-  responsiveNavbar.classList.add("image-holder");
+  responsiveNavbar.classList.add("button-menu-responsive", "image-holder");
   responsiveNavbar.setAttribute("id", "button-menu-responsive");
 
   navbarContainer.appendChild(listContainer);
@@ -116,7 +116,6 @@ export default function NavbarComponent() {
   profileImage.addEventListener("click", () => {
     menuHidden.classList.toggle("show");
   });
-
 
   logoContainer.appendChild(appLogo);
 

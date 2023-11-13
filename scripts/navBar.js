@@ -14,6 +14,7 @@ menuResponsiveButton.addEventListener("click", () => {
   menuResponsive.classList.toggle("show-navbar");
 });
 
+const darkModeButton = document.querySelector("#dark-mode__button");
 
 if (localStorage.getItem("theme") == "light") {
   darkModeButton.classList.remove("on");
