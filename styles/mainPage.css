@@ -1,43 +1,8 @@
-[class^="main__container"] {
-  min-width: 25%;
-  height: max(20rem, 80vh);
-  overflow-y: auto;
-}
-[class^="main__container"]::-webkit-scrollbar {
-  background-color: transparent;
-  width: 0.4rem;
-}
-[class^="main__container"]::-webkit-scrollbar-thumb {
-  background-color: var(--bg-color-body);
-  border-radius: 0.5rem;
-}
 .post__container {
   background-color: var(--container-color);
   width: max(90%, 20rem);
   padding: 1rem 2rem;
   border-radius: 0.5rem;
-}
-.main__container-left {
-  display: flex;
-  justify-content: space-around;
-}
-.menu-left__item-logo {
-  width: 2rem;
-  height: 2rem;
-  object-fit: contain;
-}
-.form__input-container {
-  display: flex;
-}
-.form__input {
-  padding: 0.2rem;
-  outline: transparent;
-  border: none;
-}
-.form__button {
-  background-color: var(--bg-color-body);
-  color: var(--font-color-optional);
-  padding: 0.2rem 0.4rem;
 }
 .main__container-center {
   flex-grow: 2;

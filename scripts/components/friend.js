@@ -22,9 +22,11 @@ function displayFriend(nameFriend, status = false, index = 1) {
 
   friendImageContainer.style.position = "relative";
 
-  status
+  status === true
     ? friendStatus.classList.add("user__active")
-    : friendStatus.classList.add("user__offline");
+    : status === false
+    ? friendStatus.classList.add("user__offline")
+    : friendStatus.classList.add("");
 
   container.classList.add("menu__item-link");
   containerLink.classList.add("flex", "flex__gap-sm", "flex__item-center");

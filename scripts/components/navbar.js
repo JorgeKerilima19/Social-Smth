@@ -1,9 +1,21 @@
 import hiddenMenu from "./hiddenMenu.js";
 
 const navRoutes = [
-  { itemlogo: "/assets/svg/chat.svg", name: "ROute1", to: "#" },
-  { itemlogo: "/assets/svg/watch.svg", name: "ROute1", to: "#" },
-  { itemlogo: "/assets/svg/notifications.svg", name: "ROute1", to: "#" },
+  {
+    itemlogo: "/assets/svg/chat.svg",
+    name: "ROute1",
+    to: "./messages.html",
+  },
+  {
+    itemlogo: "/assets/svg/watch.svg",
+    name: "ROute1",
+    to: "./watch.html",
+  },
+  {
+    itemlogo: "/assets/svg/notifications.svg",
+    name: "ROute1",
+    to: "./notifications.html",
+  },
 ];
 
 export default function NavbarComponent() {
@@ -45,8 +57,6 @@ export default function NavbarComponent() {
   logoContainer.href = "/pages/main.html";
   logoContainer.appendChild(appLogo);
 
-  logoContainer.classList.add("Xd");
-
   appLogo.classList.add("logo-container");
 
   //nav-itemList
@@ -60,6 +70,8 @@ export default function NavbarComponent() {
     const ItemLinkContainer = document.createElement("a");
     const itemImage = document.createElement("img");
     const itemText = document.createElement("span");
+
+    ItemLinkContainer.href = item.to;
 
     ItemLinkContainer.appendChild(itemImage);
     ItemLinkContainer.appendChild(itemText);

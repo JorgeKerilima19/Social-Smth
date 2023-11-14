@@ -413,6 +413,47 @@ a {
   height: var(--footer-height);
   text-decoration: underline;
 }
+
+/*--------------Main Containers------------*/
+
+[class^="main__container"] {
+  min-width: 25%;
+  height: max(20rem, 80vh);
+  overflow-y: auto;
+}
+[class^="main__container"]::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0.4rem;
+}
+[class^="main__container"]::-webkit-scrollbar-thumb {
+  background-color: var(--bg-color-body);
+  border-radius: 0.5rem;
+}
+.main__container-left {
+  display: flex;
+  justify-content: space-around;
+}
+.menu-left__item-logo {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+}
+
+.form__input-container {
+  display: flex;
+}
+.form__input {
+  padding: 0.2rem;
+  outline: transparent;
+  border: none;
+  width: max(10rem, 80%);
+}
+.form__button {
+  background-color: var(--bg-color-body);
+  color: var(--font-color-optional);
+  padding: 0.2rem 0.4rem;
+}
+
 @media (max-width: 500px) {
   .navbar-item {
     width: 100%;

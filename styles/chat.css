@@ -1,0 +1,19 @@
+.menu-left-chat {
+  min-width: 4rem;
+  max-width: 5rem;
+}
+.menu-container {
+  flex-wrap: wrap;
+}
+.menu__item-link {
+  width: 100%;
+}
+.menu__item-link > span {
+  display: none;
+}
+.main__container-left {
+  display: flex;
+}
+.hamburger-btn {
+  display: none;
+}
