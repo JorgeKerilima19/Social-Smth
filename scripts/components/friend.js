@@ -1,6 +1,6 @@
 import friendsPhoto from "../helpers/photoLinkList.js";
 
-function displayFriend(nameFriend, status = false, index = 1) {
+function displayFriend(nameFriend, status = undefined, index = 1) {
   const container = document.createElement("li");
   const containerLink = document.createElement("a");
   const friendImageContainer = document.createElement("div");
@@ -24,9 +24,9 @@ function displayFriend(nameFriend, status = false, index = 1) {
 
   status === true
     ? friendStatus.classList.add("user__active")
-    : status === false
-    ? friendStatus.classList.add("user__offline")
-    : friendStatus.classList.add("");
+    : status === undefined
+    ? friendStatus.classList.add("xd")
+    : friendStatus.classList.add("user__offline");
 
   container.classList.add("menu__item-link");
   containerLink.classList.add("flex", "flex__gap-sm", "flex__item-center");

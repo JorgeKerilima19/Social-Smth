@@ -1,12 +1,19 @@
 import displayFriend from "./components/friend.js";
+import { getUsers } from "./functions/fetchUsers.js";
+
+const menuLeft = document.getElementById("menu-right");
+
+menuLeft.classList.add("menu-left-chat");
 
 console.log("friend1");
 
 const friendList = document.querySelector("#friend-list");
 
-friendList.classList.add("width-full")
+friendList.classList.add("width-full");
 
-const friend1 = displayFriend("Jogn", false, 1);
-
-friendList.appendChild(friend1);
-console.log(friend1);
+getUsers().then((data) =>
+  data.map((user, index) => {
+    const friend = displayFriend(user.name, undefined, index);
+    friendList.appendChild(friend);
+  })
+);
