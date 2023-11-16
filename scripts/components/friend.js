@@ -41,7 +41,7 @@ function displayFriend(
   containerLink.appendChild(friendName);
   container.appendChild(containerLink);
 
-  //FriendCompoentn hover?
+  //FriendComponent hover?
   toHover
     ? container.classList.add("menu__item-link")
     : container.classList.add("menu__item-link", "notHover");

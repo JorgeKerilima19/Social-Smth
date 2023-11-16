@@ -15,8 +15,8 @@ const chatWrapper = document.getElementById("chat-section");
 chatWrapper.classList.add(
   "width__full",
   "flex",
-  "flex__sp-btw",
-  "flex__item-center"
+  "flex__column",
+  "flex__sp-btw"
 );
 
 getUsers().then((data) =>
@@ -26,11 +26,16 @@ getUsers().then((data) =>
     //set chatter
 
     friend.addEventListener("click", () => {
+      const topWrapper = document.createElement("div");
       const chatter = displayFriend(user.name, undefined, index, false);
       const options = chatSectionTop();
       chatWrapper.innerHTML = "";
-      chatWrapper.appendChild(chatter);
-      chatWrapper.appendChild(options);
+      topWrapper.appendChild(chatter);
+      topWrapper.appendChild(options);
+
+      topWrapper.classList.add("flex", "flex__sp-btw");
+
+      chatWrapper.appendChild(topWrapper);
     });
 
     friendList.appendChild(friend);

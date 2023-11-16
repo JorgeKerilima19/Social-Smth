@@ -17,3 +17,17 @@
 .hamburger-btn {
   display: none;
 }
+.chat__main-wrapper {
+  padding: 2rem 2rem 0;
+  height: var(--full-height-page);
+}
+.chat__main-wrapper > * {
+  overflow-y: auto;
+}
+.chat-section {
+  width: 80%;
+}
+.chat-section__img {
+  width: 2rem;
+  height: 2rem;
+}

@@ -19,10 +19,16 @@ const chatSectionTop = () => {
   const topWrapper = document.createElement("div");
 
   options.map((el) => {
-    const img = document.createElement("img");
+    const svg = document.createElement("img");
+
+    svg.src = el.svg;
+
+    svg.classList.add("chat-section__img");
+
+    topWrapper.appendChild(svg);
   });
 
-  // topWrapper.appendChild(img);
+  topWrapper.classList.add("flex", "flex__gap-sm");
 
   return topWrapper;
 };
