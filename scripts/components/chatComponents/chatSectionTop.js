@@ -1,29 +1,30 @@
 const options = [
   {
     name: "call",
-    svg: "",
+    svg: "../../assets/svg/chatSection/call.svg",
   },
   {
     name: "videochat",
-    svg: "",
+    svg: "../../assets/svg/chatSection/video.svg",
   },
   {
     name: "more info",
-    svg: "",
+    svg: "../../assets/svg/chatSection/moreinfo.svg",
   },
 ];
 
-const chatSectionTop = (user) => {
+const chatSectionTop = () => {
   //top section
 
-  const topWrapper = document.createElement("ul");
+  const topWrapper = document.createElement("div");
 
-  chatterName.innerText = user.name;
+  options.map((el) => {
+    const img = document.createElement("img");
+  });
 
-  topWrapper.appendChild(chatterImage);
-  topWrapper.appendChild(chatterName);
+  // topWrapper.appendChild(img);
 
   return topWrapper;
 };
 
-export default chatSection;
+export default chatSectionTop;

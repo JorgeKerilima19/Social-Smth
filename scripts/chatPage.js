@@ -26,8 +26,8 @@ getUsers().then((data) =>
     //set chatter
 
     friend.addEventListener("click", () => {
-      const chatter = displayFriend(user.name, undefined, index);
-      const options = chatSectionTop(user);
+      const chatter = displayFriend(user.name, undefined, index, false);
+      const options = chatSectionTop();
       chatWrapper.innerHTML = "";
       chatWrapper.appendChild(chatter);
       chatWrapper.appendChild(options);

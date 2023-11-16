@@ -371,7 +371,7 @@ a {
   border-radius: 0.5rem;
   cursor: pointer;
 }
-.menu__item-link:hover {
+.menu__item-link:not(.notHover):hover {
   background-color: var(--bg-color-body);
 }
 .to-hover:hover {
