@@ -1,3 +1,4 @@
+import chatSectionMessages from "./components/chatComponents/chatSectionMessages.js";
 import chatSectionTop from "./components/chatComponents/chatSectionTop.js";
 import displayFriend from "./components/friend.js";
 import { getUsers } from "./functions/fetchUsers.js";
@@ -29,6 +30,9 @@ getUsers().then((data) =>
       const topWrapper = document.createElement("div");
       const chatter = displayFriend(user.name, undefined, index, false);
       const options = chatSectionTop();
+
+      const textArea = chatSectionMessages();
+
       chatWrapper.innerHTML = "";
       topWrapper.appendChild(chatter);
       topWrapper.appendChild(options);
@@ -36,6 +40,7 @@ getUsers().then((data) =>
       topWrapper.classList.add("flex", "flex__sp-btw");
 
       chatWrapper.appendChild(topWrapper);
+      chatWrapper.appendChild(textArea);
     });
 
     friendList.appendChild(friend);
