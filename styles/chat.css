@@ -1,3 +1,16 @@
+textarea {
+  font-size: inherit;
+  padding-left: 0.2rem;
+  resize: none;
+  height: 2rem;
+  overflow: hidden;
+  border-radius: 0.2rem;
+  border: 0;
+  outline: transparent;
+  background-color: inherit;
+  color: inherit;
+  border: thin solid var(--font-color);
+}
 .menu-left-chat {
   min-width: 4rem;
   max-width: 5rem;
@@ -18,7 +31,7 @@
   display: none;
 }
 .chat__main-wrapper {
-  padding: 2rem 2rem 0;
+  padding: 2rem 2rem;
   height: var(--full-height-page);
 }
 .chat__main-wrapper > * {
@@ -27,7 +40,24 @@
 .chat-section {
   width: 80%;
 }
+.chat-section__form {
+  padding: 0.4rem;
+  background-color: var(--container-color);
+  border-radius: 0.4rem;
+}
 .chat-section__img {
   width: 2rem;
   height: 2rem;
+}
+.chat-section__input {
+  display: none;
+}
+.icon-container__bg {
+  width: 2rem;
+  height: 2rem;
+  background-position: center;
+  background-size: contain;
+}
+.chat-section__icons-wrapper {
+  width: 10rem;
 }

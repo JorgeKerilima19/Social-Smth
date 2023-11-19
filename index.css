@@ -122,11 +122,17 @@ a {
 .flex__wrap {
   flex-wrap: wrap;
 }
+.width__90 {
+  width: 90%;
+}
 .width__full {
   width: 100%;
 }
 .width__md {
   width: 50%;
+}
+.margin__all-right {
+  margin-right: auto;
 }
 .svg-container__small {
   height: 1.5rem;
