@@ -36,6 +36,7 @@ textarea {
 }
 .chat__main-wrapper > * {
   overflow-y: auto;
+  overflow-x: hidden;
 }
 .chat-section {
   width: 80%;
@@ -60,4 +61,38 @@ textarea {
 }
 .chat-section__icons-wrapper {
   width: 10rem;
+}
+
+@media (max-width: 700px) {
+  .chat__main-wrapper {
+    padding: 0.5rem;
+  }
+  .chat-section__top-wrapper {
+    width: 100%;
+  }
+  .chat-section__top-wrapper .menu__item-link {
+    width: 80%;
+  }
+  .chat-section__top-wrapper .menu__item-link span {
+    display: block;
+  }
+  .menu-left-chat {
+    display: none;
+  }
+  .friend-info__container span {
+    display: none;
+  }
+  .menu__item-link {
+    width: 3rem;
+  }
+  .chat-section__friends-container {
+    width: 5rem;
+  }
+  .menu__item-link:not(.notHover):hover {
+    background-color: transparent;
+  }
+  .user__image-sm {
+    height: 2rem;
+    width: 2rem;
+  }
 }

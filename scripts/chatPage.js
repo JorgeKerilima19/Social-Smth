@@ -37,7 +37,12 @@ getUsers().then((data) =>
       topWrapper.appendChild(chatter);
       topWrapper.appendChild(options);
 
-      topWrapper.classList.add("flex", "flex__sp-btw");
+      topWrapper.classList.add(
+        "flex",
+        "flex__sp-btw",
+        "flex__item-center",
+        "chat-section__top-wrapper"
+      );
 
       chatWrapper.appendChild(topWrapper);
       chatWrapper.appendChild(textArea);

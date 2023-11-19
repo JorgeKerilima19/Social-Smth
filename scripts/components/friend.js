@@ -33,7 +33,12 @@ function displayFriend(
     ? friendStatus.classList.add("none")
     : friendStatus.classList.add("user__offline");
 
-  containerLink.classList.add("flex", "flex__gap-sm", "flex__item-center");
+  containerLink.classList.add(
+    "flex",
+    "flex__gap-sm",
+    "flex__item-center",
+    "friend-info__container"
+  );
 
   friendImageContainer.appendChild(friendImage);
   friendImageContainer.appendChild(friendStatus);
