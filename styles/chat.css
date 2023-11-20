@@ -62,6 +62,13 @@ textarea {
 .chat-section__icons-wrapper {
   width: 10rem;
 }
+.chat-section__subtitle {
+  font-size: 1.1rem;
+  margin: auto;
+}
+.chat-section__header {
+  font-size: 1.2rem;
+}
 
 @media (max-width: 700px) {
   .chat__main-wrapper {
@@ -94,5 +101,9 @@ textarea {
   .user__image-sm {
     height: 2rem;
     width: 2rem;
+  }
+  .icon-container__bg {
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
