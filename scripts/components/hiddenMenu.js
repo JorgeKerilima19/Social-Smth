@@ -1,7 +1,13 @@
 const options = [
-  { name: "Settings and privacy", logo: "" },
-  { name: "Help center and feedback", logo: "" },
-  { name: "Log out", logo: "" },
+  {
+    name: "Settings and privacy",
+    logo: "../../assets/svg/chatSection/call.svg",
+  },
+  {
+    name: "Help center and feedback",
+    logo: "../../assets/svg/chatSection/call.svg",
+  },
+  { name: "Log out", logo: "../../assets/svg/chatSection/call.svg" },
 ];
 
 const hiddenMenu = () => {
@@ -12,9 +18,12 @@ const hiddenMenu = () => {
   const text = document.createElement("span");
   const userPhoto = document.createElement("img");
 
-  userPhoto.src = "";
+  userPhoto.src = "../assets/userImage.jpg";
   username.innerText = "Username";
-  text.innerText = "Username";
+  text.innerText = "See profile";
+
+  userPhoto.classList.add("hidden__menu-img", "user__image-sm");
+  profileWrapper.classList.add("hidden__menu-grid");
 
   profileWrapper.appendChild(userPhoto);
   profileWrapper.appendChild(username);
@@ -44,6 +53,7 @@ const hiddenMenu = () => {
   //Option Container
 
   const optionsContainer = document.createElement("ul");
+  optionsContainer.classList.add("menu-container");
 
   options.map((option) => {
     const container = document.createElement("div");
@@ -52,6 +62,9 @@ const hiddenMenu = () => {
 
     optionImage.src = option.logo;
     optionName.innerText = option.name;
+
+    container.classList.add("flex", "flex__item-center", "flex__gap-sm");
+    optionImage.classList.add("svg-container__small");
 
     container.appendChild(optionImage);
     container.appendChild(optionName);
