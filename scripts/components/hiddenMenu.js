@@ -1,3 +1,5 @@
+import footer from "./footer.js";
+
 const options = [
   {
     name: "Settings and privacy",
@@ -13,15 +15,20 @@ const options = [
 const hiddenMenu = () => {
   const sectionContainer = document.createElement("section");
 
-  const profileWrapper = document.createElement("section");
+  const profileWrapper = document.createElement("a");
   const username = document.createElement("span");
   const text = document.createElement("span");
   const userPhoto = document.createElement("img");
+
+  profileWrapper.href = "#";
 
   userPhoto.src = "../assets/userImage.jpg";
   username.innerText = "Username";
   text.innerText = "See profile";
 
+  //classes
+
+  text.classList.add("footer__a");
   userPhoto.classList.add("hidden__menu-img", "user__image-sm");
   profileWrapper.classList.add("hidden__menu-grid");
 
@@ -83,11 +90,16 @@ const hiddenMenu = () => {
     }
   });
 
+  //footer
+
+  const footerContainer = footer();
+
   //parent Elements append
 
   sectionContainer.appendChild(profileWrapper);
   sectionContainer.appendChild(darkModeContainer);
   sectionContainer.appendChild(optionsContainer);
+  sectionContainer.appendChild(footerContainer);
 
   sectionContainer.setAttribute("id", "hidden-menu");
   sectionContainer.classList.add("hidden-menu");

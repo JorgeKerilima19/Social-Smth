@@ -27,6 +27,9 @@ a {
   color: inherit;
   text-decoration: none;
 }
+.footer__a {
+  text-decoration: underline;
+}
 :root {
   --bg-color-secondary: hsl(0, 0%, 90%);
   --bg-color-body: hsl(24, 100%, 50%);
@@ -108,6 +111,10 @@ a {
 .flex__sp-ard {
   justify-content: space-around;
 }
+.flex__sp-evl {
+  justify-content: space-around;
+}
+
 .flex__item-start {
   align-items: start;
 }
@@ -418,17 +425,6 @@ a {
 .menu-dark-mode__button.on {
   transform: translateX(115%);
 }
-.footer {
-  font-size: 1em;
-  display: flex;
-  place-content: center space-evenly;
-  flex-wrap: wrap;
-  width: 100%;
-  gap: 0.4rem;
-  height: var(--footer-height);
-  text-decoration: underline;
-}
-
 /*--------------Main Containers------------*/
 
 [class^="main__container"] {
