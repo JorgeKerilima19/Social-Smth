@@ -27,7 +27,7 @@ export default function NavbarComponent() {
   const navbarContainer = document.createElement("nav");
   const MenuHamburger = document.createElement("div");
   const menuHidden = hiddenMenu();
-  const profileImage = document.createElement("div");
+  const profileImage = document.createElement("img");
 
   //Logos
   const appLogo = document.createElement("picture");
@@ -79,6 +79,7 @@ export default function NavbarComponent() {
     //addons
     itemImage.src = item.itemlogo;
     itemText.innerText = item.name;
+    profileImage.src = "../assets/userImage.jpg";
     profileImage.classList.add("image-holder", "profile-img");
 
     //classes
