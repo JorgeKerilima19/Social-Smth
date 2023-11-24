@@ -13,6 +13,8 @@ export default function createPost(
 
   const mainPostContainer = postContainer.cloneNode(true);
 
+  mainPostContainer.setAttribute("id", postId);
+
   //Post AuthorInfo
 
   const authorInfo = document.createElement("section");

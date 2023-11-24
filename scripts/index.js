@@ -49,7 +49,7 @@ const postDefault = createPost(
   "../assets/postImages/minecraftMeme.jpg"
 );
 const postDefault1 = createPost(
-  0,
+  1,
   "Ervin Howell",
   "Antonette",
   clearSpaces(

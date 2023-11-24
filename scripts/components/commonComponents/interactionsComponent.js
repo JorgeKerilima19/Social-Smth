@@ -2,7 +2,10 @@ import { randomNumber, randomNumber5 } from "../../functions/randomNumber.js";
 
 import commentSection from "../commentSection.js";
 
+let commentsNumber;
+
 function handleClick(postId) {
+  const mainContainer = document.getElementById(postId);
   const commentsContainer = postId
     ? commentSection(postId, commentsNumber)
     : commentSection((postId = 1), commentsNumber);
@@ -37,8 +40,6 @@ export default function interactionsComponent(postId) {
   //Post Reactions
 
   const reactions = ["Reaction", "Comment", "Share"];
-
-  let commentsNumber;
 
   const reactionContainer = document.createElement("div");
 
@@ -78,7 +79,6 @@ export default function interactionsComponent(postId) {
   });
 
   mainContainer.appendChild(reactionContainer);
-  console.log(reactionContainer);
 
   //Interactions section
 
