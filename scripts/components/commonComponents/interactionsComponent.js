@@ -2,9 +2,7 @@ import { randomNumber, randomNumber5 } from "../../functions/randomNumber.js";
 
 import commentSection from "../commentSection.js";
 
-let commentsNumber;
-
-function handleClick(postId) {
+function handleClick(postId, commentsNumber, container) {
   const mainContainer = document.getElementById(postId);
   const commentsContainer = postId
     ? commentSection(postId, commentsNumber)
@@ -51,6 +49,8 @@ export default function interactionsComponent(postId) {
     "width__full",
     "separator"
   );
+
+  let commentsNumber;
 
   reactions.forEach((el) => {
     const container = document.createElement("div");
@@ -119,7 +119,9 @@ export default function interactionsComponent(postId) {
 
     if (el.name === "Comment") {
       container.classList.add("comment-button");
-      container.addEventListener("click", () => handleClick(postId));
+      container.addEventListener("click", () =>
+        handleClick(postId, commentsNumber, container)
+      );
     }
 
     container.appendChild(imgSvg);

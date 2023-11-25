@@ -12,6 +12,7 @@ export default function commentSection(postId, numberComments) {
     "height__min-sm",
     "flex__gap-md"
   );
+  console.log(numberComments);
   if (postId) {
     if (numberComments > 0) {
       getComments(postId).then((comments) => {

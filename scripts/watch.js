@@ -1,7 +1,14 @@
 import interactionsComponent from "./components/commonComponents/interactionsComponent.js";
 
-const reactionsSection = document.getElementById("rea");
+import videoComponent from "./components/watchComponents/videoComponent.js";
 
-const a = interactionsComponent(1);
+const videosContainer = document.getElementById("videos-container");
 
-reactionsSection.appendChild(a);
+const video = videoComponent();
+const video1 = videoComponent();
+
+// const a = interactionsComponent(1);
+
+// videosContainer.appendChild(a);
+videosContainer.appendChild(video);
+videosContainer.appendChild(video1);
