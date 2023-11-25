@@ -1,4 +1,4 @@
-import {staticArray} from "../helpers/linksArray.js";
+import { staticArray } from "../helpers/linksArray.js";
 import { randomNumber5 } from "../functions/randomNumber.js";
 
 export default function commentComponent(userName, content) {

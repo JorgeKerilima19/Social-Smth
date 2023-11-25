@@ -2,14 +2,13 @@ import { randomNumber, randomNumber5 } from "../../functions/randomNumber.js";
 
 import commentSection from "../commentSection.js";
 
-function handleClick(postId, commentsNumber, container) {
+function handleClick(postId, commentsNumber) {
   const mainContainer = document.getElementById(postId);
   const commentsContainer = postId
     ? commentSection(postId, commentsNumber)
     : commentSection((postId = 1), commentsNumber);
-  mainContainer.appendChild(commentsContainer);
 
-  container.removeEventListener("click", handleClick);
+  mainContainer.appendChild(commentsContainer);
 }
 
 const interactions = [
@@ -119,9 +118,15 @@ export default function interactionsComponent(postId) {
 
     if (el.name === "Comment") {
       container.classList.add("comment-button");
-      container.addEventListener("click", () =>
-        handleClick(postId, commentsNumber, container)
-      );
+      container.addEventListener("click", () => {
+        //return based on post nodes number
+        const postWrapper = container.closest(".post__container");
+
+        if (postWrapper.childNodes.length > 2) {
+          return;
+        }
+        handleClick(postId, commentsNumber, container);
+      });
     }
 
     container.appendChild(imgSvg);
