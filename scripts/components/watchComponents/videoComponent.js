@@ -3,6 +3,7 @@ import displayFriend from "../friend.js";
 
 import interactionsComponent from "../commonComponents/interactionsComponent.js";
 import postOptions from "../commonComponents/postOptions.js";
+import videoControls from "./videoControls.js";
 
 let index = 0;
 
@@ -23,12 +24,28 @@ export default function videoComponent(user, post) {
   bottomWrapper.setAttribute("data-part", `upper-${index}`);
 
   //upper component part
+
   const videoUserContainer = displayFriend(user.name, undefined, index, false);
   const videoOptions = postOptions();
 
   upperWrapper.appendChild(videoUserContainer);
   upperWrapper.appendChild(videoOptions);
-  //mid component part
+
+  //mid component part (VIDEO)
+
+  const video = document.createElement("video");
+  const source = document.createElement("source");
+  const controllers = videoControls(video);
+
+  // video.controls = true;
+  source.src = "../../../assets/videos/randomvideo.mp4";
+
+  video.appendChild(source);
+
+  video.classList.add("video-wrapper");
+
+  midWrapper.appendChild(video);
+  midWrapper.appendChild(controllers);
 
   //bottom component part
 
@@ -45,7 +62,9 @@ export default function videoComponent(user, post) {
   upperWrapper.classList.add("flex", "flex__gap-sm", "flex__sp-btw");
   mainWrapper.classList.add(
     "bg__container",
-    "flex__container",
+    "flex",
+    "flex__column",
+    "flex__gap-sm",
     "video-card__container",
     "pd-md"
   );

@@ -5,3 +5,7 @@
 .video__img {
   width: 100%;
 }
+.video-wrapper {
+  width: 25rem;
+  height: auto;
+}
