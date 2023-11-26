@@ -6,7 +6,9 @@ function displayFriend(
   index = 1,
   toHover = true
 ) {
-  const container = document.createElement("li");
+  const container = toHover
+    ? document.createElement("li")
+    : document.createElement("div");
   const containerLink = document.createElement("a");
   const friendImageContainer = document.createElement("div");
   const friendImage = document.createElement("img");

@@ -6,3 +6,12 @@ export async function getPost(postId) {
 
   return posts;
 }
+
+export async function getUserPost(userId) {
+  const url = `https://jsonplaceholder.typicode.com/users/1${userId}/posts`;
+
+  const res = await fetch(url);
+  const posts = await res.json();
+
+  return posts;
+}

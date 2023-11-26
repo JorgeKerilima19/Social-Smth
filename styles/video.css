@@ -1,0 +1,7 @@
+.video-card__container {
+  width: min(100%, 30rem);
+  min-height: 10rem;
+}
+.video__img {
+  width: 100%;
+}

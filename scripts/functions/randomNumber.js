@@ -14,3 +14,9 @@ export function randomNumber5() {
 
   return number;
 }
+
+export function randomNumber10() {
+  const number = Math.floor(Math.random() * 9);
+
+  return number + 1;
+}
