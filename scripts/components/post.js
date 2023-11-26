@@ -1,6 +1,7 @@
 import postContainer from "./commonComponents/postContainer.js";
 
 import interactionsComponent from "./commonComponents/interactionsComponent.js";
+import postOptions from "./commonComponents/postOptions.js";
 
 export default function createPost(
   postId = 0,
@@ -45,26 +46,7 @@ export default function createPost(
   authorAppInfo.appendChild(postPrivacy);
 
   //Post settings
-
-  const postSettings = document.createElement("div");
-  const hidePost = document.createElement("img");
-  const postOptions = document.createElement("img");
-
-  hidePost.addEventListener("click", () => {
-    const articleParent = postOptions.closest(".post__container");
-    if (articleParent) {
-      articleParent.remove();
-    }
-  });
-
-  postSettings.classList.add("flex", "flex__gap-sm");
-  hidePost.src = "../../assets/svg/cross.svg";
-  postOptions.src = "../../assets/svg/dotsHorizontal.svg";
-  postOptions.classList.add("svg-container__small");
-  hidePost.classList.add("svg-container__small");
-
-  postSettings.appendChild(postOptions);
-  postSettings.appendChild(hidePost);
+  const postSettings = postOptions();
 
   postAuthorInfo.appendChild(authorProfileImage);
   postAuthorInfo.appendChild(authorAppInfo);
