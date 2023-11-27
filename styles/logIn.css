@@ -1,7 +1,7 @@
 .header {
   display: none;
 }
-.main__log-in{
+.main__log-in {
   display: flex;
   min-height: 100vh;
   position: relative;
@@ -68,6 +68,7 @@
   text-decoration: underline;
   padding: 0.5rem;
   background-color: transparent;
+  color: var(--bg-color-body);
 }
 .main-right__log-in {
   gap: 1rem;
@@ -149,7 +150,8 @@
   font-size: inherit;
   border: 0;
   padding: 0.5rem 2rem;
-  background-color: greenyellow;
+  background-color: var(--bg-color-body);
+  color: var(--primary-color);
 }
 .footer {
   font-size: 1em;
