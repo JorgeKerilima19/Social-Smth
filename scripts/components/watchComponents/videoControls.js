@@ -1,12 +1,17 @@
 export default function videoControls(video) {
   const controlsContainer = document.createElement("div");
-  const playVideo = document.createElement("button");
-  const muteVideo = document.createElement("button");
-  const fullScreen = document.createElement("button");
 
-  playVideo.innerText = "play";
-  muteVideo.innerText = "mute";
-  fullScreen.innerText = "fullScreen";
+  const playVideo = document.createElement("img");
+  const muteVideo = document.createElement("img");
+  const fullScreen = document.createElement("img");
+
+  playVideo.src = "../../../assets/svg/pause.svg";
+  muteVideo.src = "../../../assets/svg/mute.svg";
+  fullScreen.src = "../../../assets/svg/fullscreen.svg";
+
+  playVideo.classList.add("video__button");
+  muteVideo.classList.add("video__button");
+  fullScreen.classList.add("video__button");
 
   playVideo.addEventListener("click", () => {
     if (video.paused) {

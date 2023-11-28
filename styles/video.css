@@ -9,3 +9,8 @@
   width: 25rem;
   height: auto;
 }
+.video__button {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: cover;
+}

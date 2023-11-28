@@ -19,9 +19,6 @@ export default function commentSection(postId, numberComments) {
     );
     const videoMainContainer = document.getElementById(`post-${postId}`);
 
-    console.log(commentContainer);
-    console.log(videoMainContainer);
-
     videoMainContainer.removeChild(commentContainer);
   });
 
