@@ -81,13 +81,29 @@ export default function videoComponent(user, post) {
     // Video part
     const videoInfo = document.createElement("div");
     const userInfo = videoUserContainer.cloneNode(true);
+    const videoSrc = video.cloneNode(true);
+
+    videoSrc.play();
+    videoSrc.controls = true;
+
     videoInfo.appendChild(userInfo);
+    videoInfo.appendChild(videoSrc);
 
     // Comment section
     const videoComments = document.createElement("div");
-    videoComments.innerText = "comments here";
+    const videoInteractions = postInteractions.cloneNode(true);
 
-    videoModalContainer.classList.add("video-component");
+    console.log(videoInteractions);
+
+    videoComments.appendChild(videoInteractions);
+
+    videoModalContainer.classList.add(
+      "video-component",
+      "flex",
+      "flex__item-center",
+      "flex__sp-center",
+      "pd-md"
+    );
 
     videoComponent.appendChild(videoInfo);
     videoComponent.appendChild(videoComments);
@@ -97,10 +113,21 @@ export default function videoComponent(user, post) {
     mainWrapper.appendChild(videoModalContainer);
 
     // Classes
-    videoComponent.classList.add("video-modal", "flex", "flex__gap-md");
+    videoComponent.classList.add(
+      "video-modal",
+      "flex",
+      "flex__gap-md",
+      "width__90"
+    );
 
     // Remove modal
-    videoComments.addEventListener("click", (e) => {
+    const closeModal = document.createElement("img");
+    closeModal.src = "../../assets/svg/cross.svg";
+    closeModal.classList.add("video__close-modal");
+
+    videoInfo.appendChild(closeModal);
+
+    closeModal.addEventListener("click", (e) => {
       e.stopPropagation();
       mainWrapper.removeChild(videoModalContainer);
     });

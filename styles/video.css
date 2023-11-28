@@ -26,3 +26,13 @@
 .video-modal {
   background-color: var(--container-color);
 }
+.video__close-modal {
+  position: absolute;
+  height: 1.8rem;
+  width: 1.8rem;
+  top: 0.5rem;
+  left: 1rem;
+  z-index: 99;
+  border: thin solid var(--bg-color-body);
+  border-radius: 50%;
+}
