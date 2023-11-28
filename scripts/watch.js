@@ -5,8 +5,6 @@ import { randomNumber10 } from "./functions/randomNumber.js";
 
 const userId = randomNumber10() + 1;
 
-console.log(userId);
-
 getUser(userId).then((user) => {
   const videosContainer = document.getElementById("videos-container");
 

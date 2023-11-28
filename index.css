@@ -124,6 +124,9 @@ a {
 .margin__all-right {
   margin-right: auto;
 }
+.margin__all-left {
+  margin-left: auto;
+}
 .svg-container__small {
   height: 1.5rem;
   width: 1.5rem;

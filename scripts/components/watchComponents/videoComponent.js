@@ -5,7 +5,7 @@ import interactionsComponent from "../commonComponents/interactionsComponent.js"
 import postOptions from "../commonComponents/postOptions.js";
 import videoControls from "./videoControls.js";
 
-let index = 0;
+let index = 1;
 
 export default function videoComponent(user, post) {
   const mainWrapper = postContainer.cloneNode(true);
@@ -15,13 +15,13 @@ export default function videoComponent(user, post) {
   const midWrapper = document.createElement("div");
   const bottomWrapper = document.createElement("div");
 
-  mainWrapper.setAttribute("id", index);
+  mainWrapper.setAttribute("id", `post-${index}`);
 
   //adding id to identify component part
 
   upperWrapper.setAttribute("data-part", `upper-${index}`);
   midWrapper.setAttribute("data-part", `mid-${index}`);
-  bottomWrapper.setAttribute("data-part", `upper-${index}`);
+  bottomWrapper.setAttribute("data-part", `bottom-${index}`);
 
   //upper component part
 

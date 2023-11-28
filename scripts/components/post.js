@@ -14,7 +14,7 @@ export default function createPost(
 
   const mainPostContainer = postContainer.cloneNode(true);
 
-  mainPostContainer.setAttribute("id", postId);
+  mainPostContainer.setAttribute("id", `post-${postId}`);
 
   //Post AuthorInfo
 

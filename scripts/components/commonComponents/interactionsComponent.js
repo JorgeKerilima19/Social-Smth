@@ -2,11 +2,11 @@ import { randomNumber, randomNumber5 } from "../../functions/randomNumber.js";
 
 import commentSection from "../commentSection.js";
 
-function handleClick(postId, commentsNumber) {
-  const mainContainer = document.getElementById(postId);
-  const commentsContainer = postId
-    ? commentSection(postId, commentsNumber)
-    : commentSection((postId = 1), commentsNumber);
+function handleClick(postId = 1, commentsNumber) {
+  const mainContainer = document.getElementById(`post-${postId}`);
+  const commentsContainer = commentSection(postId, commentsNumber);
+
+  commentsContainer.setAttribute("id", `comment-container-${postId}`);
 
   mainContainer.appendChild(commentsContainer);
 }

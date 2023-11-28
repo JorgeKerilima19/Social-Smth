@@ -42,14 +42,14 @@ form.addEventListener("submit", (e) => {
 //Generate default Post
 
 const postDefault = createPost(
-  0,
+  1,
   "quispechilojorge@gmail.com",
   "Jorge Luis",
   "This is an example on how a post should look like",
   "../assets/postImages/minecraftMeme.jpg"
 );
 const postDefault1 = createPost(
-  1,
+  2,
   "Ervin Howell",
   "Antonette",
   clearSpaces(
