@@ -71,5 +71,40 @@ export default function videoComponent(user, post) {
 
   index++;
 
+  //video page
+  video.addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    const videoModalContainer = document.createElement("div");
+    const videoComponent = document.createElement("div");
+
+    // Video part
+    const videoInfo = document.createElement("div");
+    const userInfo = videoUserContainer.cloneNode(true);
+    videoInfo.appendChild(userInfo);
+
+    // Comment section
+    const videoComments = document.createElement("div");
+    videoComments.innerText = "comments here";
+
+    videoModalContainer.classList.add("video-component");
+
+    videoComponent.appendChild(videoInfo);
+    videoComponent.appendChild(videoComments);
+
+    videoModalContainer.appendChild(videoComponent);
+
+    mainWrapper.appendChild(videoModalContainer);
+
+    // Classes
+    videoComponent.classList.add("video-modal", "flex", "flex__gap-md");
+
+    // Remove modal
+    videoComments.addEventListener("click", (e) => {
+      e.stopPropagation();
+      mainWrapper.removeChild(videoModalContainer);
+    });
+  });
+
   return mainWrapper;
 }
