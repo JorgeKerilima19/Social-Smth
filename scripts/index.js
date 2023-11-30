@@ -45,6 +45,7 @@ const postDefault = createPost(
   1,
   "quispechilojorge@gmail.com",
   "Jorge Luis",
+  undefined,
   "This is an example on how a post should look like",
   "../assets/postImages/minecraftMeme.jpg"
 );
@@ -52,6 +53,7 @@ const postDefault1 = createPost(
   2,
   "Ervin Howell",
   "Antonette",
+  2,
   clearSpaces(
     "itaque id aut magnam\npraesentium quia et ea odit et ea voluptas et\nsapiente quia nihil amet occaecati quia id voluptatem\nincidunt ea est distinctio odio"
   )
@@ -67,11 +69,12 @@ loadMorePost.addEventListener("click", () => {
   const postId = randomNumber100();
 
   getPost(postId).then((post) => {
-    getUser(post.userId).then((el) => {
+    getUser(post.userId).then((user) => {
       const newPost = createPost(
         postId,
-        el.email,
-        el.name,
+        user.email,
+        user.name,
+        user.id,
         clearSpaces(post.body)
       );
       postWrapper.appendChild(newPost);

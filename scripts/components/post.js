@@ -3,10 +3,13 @@ import postContainer from "./commonComponents/postContainer.js";
 import interactionsComponent from "./commonComponents/interactionsComponent.js";
 import postOptions from "./commonComponents/postOptions.js";
 
+import friendsPhoto from "../helpers/photoLinkList.js";
+
 export default function createPost(
   postId = 0,
   username,
   nickname,
+  idUser,
   postContent,
   postImage = false
 ) {
@@ -25,8 +28,12 @@ export default function createPost(
 
   postAuthorInfo.classList.add("flex", "flex__gap-sm");
 
-  const authorProfileImage = document.createElement("svg");
+  const photoId = friendsPhoto.filter((el) => el.id === idUser);
+
+  const authorProfileImage = document.createElement("img");
   authorProfileImage.classList.add("image-holder");
+
+  authorProfileImage.src = idUser ? photoId[0].src : "../assets/userImage.jpg";
 
   //Post author app info
 
