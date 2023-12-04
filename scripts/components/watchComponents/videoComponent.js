@@ -4,6 +4,7 @@ import displayFriend from "../friend.js";
 import interactionsComponent from "../commonComponents/interactionsComponent.js";
 import postOptions from "../commonComponents/postOptions.js";
 import videoControls from "./videoControls.js";
+import interactionsVideoInfo from "./interactionsVideoInfo.js";
 
 let index = 1;
 
@@ -72,9 +73,7 @@ export default function videoComponent(user, post) {
   index++;
 
   //video page
-  video.addEventListener("click", (e) => {
-    e.stopPropagation();
-
+  video.addEventListener("click", () => {
     const videoModalContainer = document.createElement("div");
     const videoComponent = document.createElement("div");
 
@@ -86,15 +85,13 @@ export default function videoComponent(user, post) {
     videoSrc.play();
     videoSrc.controls = true;
 
-    videoInfo.appendChild(userInfo);
     videoInfo.appendChild(videoSrc);
 
     // Comment section
     const videoComments = document.createElement("div");
-    const videoInteractions = postInteractions.cloneNode(true);
+    const videoInteractions = interactionsVideoInfo(videoComments);
 
-    console.log(videoInteractions);
-
+    videoComments.appendChild(userInfo);
     videoComments.appendChild(videoInteractions);
 
     videoModalContainer.classList.add(

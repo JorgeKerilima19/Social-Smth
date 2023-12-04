@@ -72,6 +72,8 @@ export default function interactionsComponent(postId) {
       ? (reactionDescription.innerText = el)
       : (reactionDescription.innerText = el + "s");
 
+    reactionNumber.setAttribute("id", `${el.toLocaleLowerCase()}-${postId}`);
+
     container.appendChild(reactionNumber);
     container.appendChild(reactionDescription);
     reactionContainer.appendChild(container);
