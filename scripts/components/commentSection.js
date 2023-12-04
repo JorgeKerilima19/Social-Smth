@@ -4,23 +4,30 @@ import clearSpaces from "../functions/clearSpaces.js";
 
 import commentComponent from "./commentComponent.js";
 
-export default function commentSection(postId, numberComments) {
+export default function commentSection(
+  postId,
+  numberComments,
+  displayed = false
+) {
   const container = document.createElement("div");
-  const closeComments = document.createElement("img");
 
-  closeComments.src = "../../assets/svg/cross.svg";
-  closeComments.classList.add("svg-container__small", "margin__all-left");
+  if (!displayed) {
+    const closeComments = document.createElement("img");
 
-  container.appendChild(closeComments);
+    closeComments.src = "../../assets/svg/cross.svg";
+    closeComments.classList.add("svg-container__small", "margin__all-left");
 
-  closeComments.addEventListener("click", () => {
-    const commentContainer = document.getElementById(
-      `comment-container-${postId}`
-    );
-    const videoMainContainer = document.getElementById(`post-${postId}`);
+    container.appendChild(closeComments);
 
-    videoMainContainer.removeChild(commentContainer);
-  });
+    closeComments.addEventListener("click", () => {
+      const commentContainer = document.getElementById(
+        `comment-container-${postId}`
+      );
+      const videoMainContainer = document.getElementById(`post-${postId}`);
+
+      videoMainContainer.removeChild(commentContainer);
+    });
+  }
 
   container.classList.add("flex", "flex__column", "flex__gap-md");
 
