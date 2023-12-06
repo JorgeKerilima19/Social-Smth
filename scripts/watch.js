@@ -10,8 +10,10 @@ getUser(userId).then((user) => {
 
   const video = videoComponent(user);
   const video1 = videoComponent(user);
+  const video2 = videoComponent(user);
 
   // videosContainer.appendChild(a);
   videosContainer.appendChild(video);
   videosContainer.appendChild(video1);
+  videosContainer.appendChild(video2);
 });

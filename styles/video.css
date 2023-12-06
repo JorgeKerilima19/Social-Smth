@@ -1,6 +1,6 @@
 .main-videos__container {
-  width: 50rem;
-  overflow: auto;
+  max-width: max(70vw, 30rem);
+  overflow-x: auto;
 }
 .video-card__container {
   width: min(100%, 27rem);
@@ -48,9 +48,12 @@
 .video-modal__video {
   width: max(20rem, 80%);
 }
-@media (max-width: 850px) {
+@media (max-width: 1050px) {
   .video-modal {
     grid-template-columns: repeat(1, 1fr);
     width: 100%;
+  }
+  .main-videos__container {
+    max-width: max(90vw, 30rem);
   }
 }
