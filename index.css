@@ -67,6 +67,18 @@ a {
   font-size: 1.2em;
   font-weight: 400;
 }
+.overflow-x {
+  overflow-x: auto;
+}
+.overflow-y {
+  overflow-y: auto;
+}
+.grid {
+  display: grid;
+}
+.place-items-center {
+  place-items: center;
+}
 .flex {
   display: flex;
 }
@@ -111,6 +123,9 @@ a {
 }
 .flex__wrap {
   flex-wrap: wrap;
+}
+.height__full {
+  height: 100%;
 }
 .width__90 {
   width: 90%;

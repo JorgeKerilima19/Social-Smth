@@ -85,13 +85,18 @@ export default function videoComponent(user, post) {
     videoSrc.play();
     videoSrc.controls = true;
 
+    videoInfo.classList.add("grid", "place-items-center");
+    videoSrc.classList.add("video-modal__video");
+
     videoInfo.appendChild(videoSrc);
 
     // Comment section
     const videoComments = document.createElement("div");
+    const modalInteractions = postInteractions.cloneNode(true);
     const videoInteractions = interactionsVideoInfo(videoComments);
 
     videoComments.appendChild(userInfo);
+    videoComments.appendChild(modalInteractions);
     videoComments.appendChild(videoInteractions);
 
     videoModalContainer.classList.add(
@@ -112,9 +117,9 @@ export default function videoComponent(user, post) {
     // Classes
     videoComponent.classList.add(
       "video-modal",
-      "flex",
-      "flex__gap-md",
-      "width__90"
+      "width__90",
+      "pd-md",
+      "overflow-y"
     );
 
     // Remove modal
