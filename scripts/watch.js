@@ -11,8 +11,6 @@ getUser(userId).then((user) => {
   const video = videoComponent(user);
   const video1 = videoComponent(user);
 
-  // const a = interactionsComponent(1);
-
   // videosContainer.appendChild(a);
   videosContainer.appendChild(video);
   videosContainer.appendChild(video1);

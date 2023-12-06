@@ -29,7 +29,7 @@ const interactions = [
   },
 ];
 
-export default function interactionsComponent(postId) {
+export default function interactionsComponent(postId, btnworking = true) {
   //reactions
 
   const mainContainer = document.createElement("article");
@@ -118,7 +118,7 @@ export default function interactionsComponent(postId) {
       "cursor__pointer"
     );
 
-    if (el.name === "Comment") {
+    if (el.name === "Comment" && btnworking) {
       container.classList.add("comment-button");
       container.addEventListener("click", () => {
         //return based on post nodes number

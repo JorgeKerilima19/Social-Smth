@@ -1,5 +1,9 @@
+.main-videos__container {
+  width: 50rem;
+  overflow: auto;
+}
 .video-card__container {
-  width: min(100%, 30rem);
+  width: min(100%, 27rem);
   min-height: 10rem;
 }
 .video__img {
@@ -15,7 +19,7 @@
   object-fit: cover;
 }
 .video-component {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   max-height: 100vh;
@@ -47,5 +51,6 @@
 @media (max-width: 850px) {
   .video-modal {
     grid-template-columns: repeat(1, 1fr);
+    width: 100%;
   }
 }

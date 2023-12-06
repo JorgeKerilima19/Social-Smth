@@ -50,7 +50,7 @@ export default function videoComponent(user, post) {
 
   //bottom component part
 
-  const postInteractions = interactionsComponent(index);
+  const postInteractions = interactionsComponent(index, false);
 
   bottomWrapper.appendChild(postInteractions);
 
