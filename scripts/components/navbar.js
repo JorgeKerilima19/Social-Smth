@@ -135,7 +135,6 @@ export default function NavbarComponent() {
   //addParentNodes
 
   const main = document.getElementById("main");
-  console.log(main);
 
   header.appendChild(logoContainer);
   header.appendChild(navbarContainer);

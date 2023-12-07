@@ -69,4 +69,8 @@
   .video-wrapper {
     width: 100%;
   }
+  .videos-container {
+    justify-content: center;
+    align-items: center;
+  }
 }

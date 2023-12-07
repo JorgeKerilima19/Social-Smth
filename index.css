@@ -455,6 +455,8 @@ a {
 .main__container-left {
   display: flex;
   justify-content: space-around;
+  position: sticky;
+  top: var(--header-height);
 }
 .menu-left__item-logo {
   width: 2rem;
