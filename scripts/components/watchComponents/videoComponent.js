@@ -8,7 +8,7 @@ import videoModal from "./videoModal.js";
 
 let index = 1;
 
-export default function videoComponent(user, post = false) {
+export default function videoComponent(user, smallForm = false) {
   const mainWrapper = postContainer.cloneNode(true);
   //wrapper to ensure commentComponentwork
   const upperMainWrapper = document.createElement("div");
@@ -26,7 +26,12 @@ export default function videoComponent(user, post = false) {
 
   //upper component part
 
-  const videoUserContainer = displayFriend(user.name, undefined, index, false);
+  const videoUserContainer = displayFriend(
+    user.name,
+    undefined,
+    user.id - 1,
+    false
+  );
   const videoOptions = postOptions();
 
   upperWrapper.appendChild(videoUserContainer);
@@ -67,7 +72,8 @@ export default function videoComponent(user, post = false) {
     "flex__column",
     "flex__gap-sm",
     "video-card__container",
-    "pd-md"
+    "pd-md",
+    `${!smallForm ? "small" : "complete"}`
   );
 
   index++;

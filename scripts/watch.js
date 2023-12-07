@@ -3,17 +3,22 @@ import { getUser } from "./functions/fetchUsers.js";
 
 import { randomNumber10 } from "./functions/randomNumber.js";
 
-const userId = randomNumber10() + 1;
+const generateMainVideos = async (wrapper, common = false) => {
+  const randomUser = randomNumber10();
+  const user = await getUser(randomUser);
+  const video = common ? videoComponent(user) : videoComponent(user, true);
+  wrapper.appendChild(video);
+};
 
-getUser(userId).then((user) => {
-  const videosContainer = document.getElementById("main-videos-container");
+// Main videos-trending videos
+const mainVideosContainer = document.getElementById("main-videos-container");
+Array.from(Array(3)).forEach(() => {
+  generateMainVideos(mainVideosContainer);
+});
 
-  const video = videoComponent(user);
-  const video1 = videoComponent(user);
-  const video2 = videoComponent(user);
+//Rest of the videos
+const videosContainer = document.getElementById("videos-container");
 
-  // videosContainer.appendChild(a);
-  videosContainer.appendChild(video);
-  videosContainer.appendChild(video1);
-  videosContainer.appendChild(video2);
+Array.from(Array(10)).forEach(() => {
+  generateMainVideos(videosContainer, true);
 });
