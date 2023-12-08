@@ -3,13 +3,13 @@ import footer from "./footer.js";
 const options = [
   {
     name: "Settings and privacy",
-    logo: "../../assets/svg/chatSection/call.svg",
+    logo: "../../assets/svg/settings.svg",
   },
   {
     name: "Help center and feedback",
     logo: "../../assets/svg/chatSection/call.svg",
   },
-  { name: "Log out", logo: "../../assets/svg/chatSection/call.svg" },
+  { name: "Log out", logo: "../../assets/svg/logOut.svg" },
 ];
 
 const hiddenMenu = () => {
