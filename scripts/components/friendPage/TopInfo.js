@@ -12,16 +12,13 @@ export default function TopInfo(user) {
 
   const userImage = document.createElement("img");
   const userName = document.createElement("span");
-  const userNickname = document.createElement("span");
 
   userImage.src = `./photos/${user.id}.jpg`;
 
   userName.innerText = user.name;
-  userNickname.innerText = user.username;
 
   userInfoContainer.appendChild(userImage);
   userInfoContainer.appendChild(userName);
-  userInfoContainer.appendChild(userNickname);
 
   mainContainer.appendChild(coverImage);
   mainContainer.appendChild(userInfoContainer);
