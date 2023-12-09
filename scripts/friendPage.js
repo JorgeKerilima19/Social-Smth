@@ -1,12 +1,6 @@
-import friendCard from "./components/friendCard.js";
-import { getUsers } from "./functions/fetchUsers.js";
+const friend = localStorage.getItem("friend");
+document.title = friend;
 
-const friendContainer = document.getElementById("friendList-container");
+const path = window.location.pathname;
 
-getUsers().then((friends) => {
-  friends.forEach((user, index) => {
-    const newUser = friendCard(user, user.email, index);
-
-    friendContainer.appendChild(newUser);
-  });
-});
+console.log(friend);

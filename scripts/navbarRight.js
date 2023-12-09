@@ -46,7 +46,7 @@ const menuRightItems = [
   {
     itemTitle: "Friends",
     itemImage: "../assets/svg/friends.svg",
-    itemTo: "../pages/friends.html",
+    itemTo: "../pages/friendList.html",
   },
   {
     itemTitle: "Saved",
