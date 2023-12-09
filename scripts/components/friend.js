@@ -36,9 +36,9 @@ function displayFriend(
     : friendStatus.classList.add("user__offline");
 
   containerLink.href = "./friendPage.html";
-  
+
   containerLink.addEventListener("click", () => {
-    localStorage.setItem("friend", nameFriend);
+    localStorage.setItem("friend", index + 1);
   });
 
   containerLink.classList.add(

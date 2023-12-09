@@ -1,6 +1,15 @@
+import TopInfo from "./components/friendPage/TopInfo.js";
+import { getUser } from "./functions/fetchUsers.js";
+
 const friend = localStorage.getItem("friend");
-document.title = friend;
+const user = await getUser(friend);
 
-const path = window.location.pathname;
+document.title = user.name;
 
-console.log(friend);
+const upperContainer = document.getElementById("user-upper-info");
+
+const topPart = TopInfo(user);
+
+upperContainer.appendChild(topPart);
+
+console.log(user);
