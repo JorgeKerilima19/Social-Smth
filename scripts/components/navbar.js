@@ -136,7 +136,14 @@ export default function NavbarComponent() {
 
   const main = document.getElementById("main");
 
-  header.appendChild(logoContainer);
-  header.appendChild(navbarContainer);
+  //navbar container
+  const navbarMainContainer = document.createElement("div");
+
+  navbarMainContainer.appendChild(logoContainer);
+  navbarMainContainer.appendChild(navbarContainer);
+
+  navbarMainContainer.classList.add("flex", "width__full", "width__limit","flex__sp-btw","flex__item-center");
+
+  header.appendChild(navbarMainContainer);
   main.appendChild(MenuHamburger);
 }

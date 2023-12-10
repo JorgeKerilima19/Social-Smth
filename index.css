@@ -305,7 +305,7 @@ a {
 .header {
   background-color: var(--bg-color-body);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   height: var(--header-height);
   padding: 0 1rem;
   gap: 5rem;
@@ -321,11 +321,13 @@ a {
   height: calc(var(--header-height) - 1rem);
   width: auto;
 }
-
+.width__limit {
+  max-width: var(--width-limit);
+}
 .header__nav {
   position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: max(60%, 20rem);
   padding: 0 1rem;
