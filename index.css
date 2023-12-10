@@ -127,14 +127,26 @@ a {
 .height__full {
   height: 100%;
 }
+.width__30 {
+  width: 30%;
+}
+.width__40 {
+  width: 40%;
+}
+.width__md {
+  width: 50%;
+}
+.width__60 {
+  width: 60%;
+}
+.width__70 {
+  width: 70%;
+}
 .width__90 {
   width: 90%;
 }
 .width__full {
   width: 100%;
-}
-.width__md {
-  width: 50%;
 }
 .margin__all-right {
   margin-right: auto;

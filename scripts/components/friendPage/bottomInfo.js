@@ -66,7 +66,14 @@ export default async function bottomInfo(user) {
     postId++;
   });
 
-  userPosts.classList.add("flex", "flex__column", "flex__gap-md");
+  userPosts.classList.add(
+    "flex",
+    "flex__column",
+    "flex__gap-md",
+    "user-page__posts-container"
+  );
+
+  profileInfo.classList.add("user-page__details-container");
   container.classList.add("flex", "flex__gap-md");
 
   container.appendChild(profileInfo);

@@ -1,0 +1,29 @@
+.user-page__container {
+  padding: 0 4rem;
+}
+.user-page__posts-container {
+  max-width: 30rem;
+  margin: auto;
+}
+.post__container {
+  padding: 1rem 1.5rem;
+}
+.menu-container {
+  padding: 0.8rem;
+}
+.user-page__details-container {
+  width: max(20rem, 40%);
+}
+@media (max-width: 850px) {
+  .user-page__container {
+    flex-direction: column;
+    padding: 0 0.5rem;
+  }
+  .user-page__details-container {
+    width: 100%;
+    position: static;
+  }
+  .menu-container {
+    min-width: 100%;
+  }
+}

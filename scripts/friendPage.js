@@ -7,15 +7,16 @@ const user = await getUser(friend);
 
 document.title = user.name;
 
-const upperContainer = document.getElementById("user-upper-info");
+const container = document.getElementById("user-upper-info");
 
 const topPart = TopInfo(user);
 
 const bottomPart = await bottomInfo(user);
 
-bottomPart.classList.add("flex", "flex__gap-bg");
+bottomPart.classList.add("flex", "flex__gap-bg", "user-page__container");
+container.classList.add("width__limit");
 
-upperContainer.appendChild(topPart);
-upperContainer.appendChild(bottomPart);
+container.appendChild(topPart);
+container.appendChild(bottomPart);
 
 console.log(user);
