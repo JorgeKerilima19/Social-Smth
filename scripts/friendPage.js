@@ -11,7 +11,9 @@ const upperContainer = document.getElementById("user-upper-info");
 
 const topPart = TopInfo(user);
 
-const bottomPart = bottomInfo(user);
+const bottomPart = await bottomInfo(user);
+
+bottomPart.classList.add("flex", "flex__gap-bg");
 
 upperContainer.appendChild(topPart);
 upperContainer.appendChild(bottomPart);

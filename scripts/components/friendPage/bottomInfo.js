@@ -1,4 +1,8 @@
-export default function bottomInfo(user) {
+import clearSpaces from "../../functions/clearSpaces.js";
+import { getUserPost } from "../../functions/fetchPosts.js";
+import createPost from "../post.js";
+
+export default async function bottomInfo(user) {
   const container = document.createElement("section");
 
   //user info
@@ -11,6 +15,7 @@ export default function bottomInfo(user) {
 
   detailsContainer.appendChild(detailsTitle);
 
+  //create elements for each basic info element
   const basicUserInfo = [
     { name: "nickname", value: user.username },
     { name: "email", value: user.email },
@@ -34,17 +39,37 @@ export default function bottomInfo(user) {
   });
 
   //classes
-  detailsContainer.classList.add("menu-container");
+  detailsContainer.classList.add("menu-container", "container__bg-container");
 
   //   detailsContainer.appendChild(userNickname);
 
   profileInfo.appendChild(detailsContainer);
 
+  //User posts
+  const userPosts = document.createElement("div");
+
+  const posts = await getUserPost(user.id);
+
+  let postId = 1;
+  posts.forEach((post) => {
+    const newPost = createPost(
+      postId,
+      user.name,
+      user.username,
+      user.id,
+      clearSpaces(post.body),
+      undefined
+    );
+    newPost.classList.add("container__bg-container");
+
+    userPosts.appendChild(newPost);
+    postId++;
+  });
+
+  userPosts.classList.add("flex", "flex__column", "flex__gap-md");
   container.classList.add("flex", "flex__gap-md");
 
   container.appendChild(profileInfo);
-
-  const userPosts = document.createElement("div");
   container.appendChild(userPosts);
 
   return container;

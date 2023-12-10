@@ -8,7 +8,7 @@ export async function getPost(postId) {
 }
 
 export async function getUserPost(userId) {
-  const url = `https://jsonplaceholder.typicode.com/users/1${userId}/posts`;
+  const url = `https://jsonplaceholder.typicode.com/users/${userId}/posts`;
 
   const res = await fetch(url);
   const posts = await res.json();
