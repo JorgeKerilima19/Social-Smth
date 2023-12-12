@@ -429,11 +429,13 @@ a {
 .to-hover:hover > svg,
 .to-hover:hover > img {
   transition: filter 0.2s;
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(142deg)
-    brightness(105%) contrast(102%);
+  filter: invert(100%) sepia(97%) saturate(13%) hue-rotate(237deg)
+    brightness(104%) contrast(104%);
 }
 .to-hover:hover > img {
   transition: none;
+  filter: contrast(0) sepia(100%) hue-rotate(116deg) brightness(1.4)
+    saturate(0.28);
 }
 .menu-dark-mode__bg {
   width: 3em;

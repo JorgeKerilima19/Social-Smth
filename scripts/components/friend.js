@@ -4,7 +4,8 @@ function displayFriend(
   nameFriend,
   status = undefined,
   index = 1,
-  toHover = true
+  toHover = true,
+  redirect = false
 ) {
   const container = toHover
     ? document.createElement("li")
@@ -35,7 +36,7 @@ function displayFriend(
     ? friendStatus.classList.add("none")
     : friendStatus.classList.add("user__offline");
 
-  containerLink.href = "./friendPage.html";
+  redirect ? (containerLink.href = "./friendPage.html") : "";
 
   containerLink.addEventListener("click", () => {
     localStorage.setItem("friend", index + 1);
