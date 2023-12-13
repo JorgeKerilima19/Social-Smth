@@ -30,7 +30,8 @@ export default function videoComponent(user, smallForm = false) {
     user.name,
     undefined,
     user.id - 1,
-    false
+    false,
+    true
   );
   const videoOptions = postOptions();
 

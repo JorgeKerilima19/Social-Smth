@@ -24,7 +24,13 @@ export default function createPost(
   const authorInfo = document.createElement("section");
   authorInfo.classList.add("flex", "flex__sp-btw");
 
-  const postAuthorInfo = document.createElement("div");
+  const postAuthorInfo = document.createElement("a");
+
+  postAuthorInfo.addEventListener("click", () => {
+    localStorage.setItem("friend", idUser);
+  });
+
+  postAuthorInfo.href = "/pages/friendPage.html";
 
   postAuthorInfo.classList.add("flex", "flex__gap-sm");
 

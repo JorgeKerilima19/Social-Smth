@@ -20,10 +20,15 @@ export default function friendCard(user, userContact, index) {
   userName.innerText = user.name;
   userEmail.innerText = userContact;
 
-  const textButton = document.createElement("button");
+  const profileButton = document.createElement("a");
   const removeButton = document.createElement("button");
 
-  textButton.innerText = "Text Friend";
+  profileButton.addEventListener("click", () => {
+    localStorage.setItem("friend", index + 1);
+  });
+
+  profileButton.innerText = "See Profile";
+  profileButton.href = "/pages/friendPage.html";
   removeButton.innerText = "Remove Friend";
 
   cardContainer.classList.add(
@@ -37,10 +42,14 @@ export default function friendCard(user, userContact, index) {
   cardInfoContainer.classList.add("container", "width__full", "flex__gap-md");
   cardInteractions.classList.add("flex", "flex__gap-sm", "width__full");
 
-  textButton.classList.add("width__full", "border__radius-sm", "bg__primary");
+  profileButton.classList.add(
+    "width__full",
+    "border__radius-sm",
+    "bg__primary"
+  );
   removeButton.classList.add("width__full", "border__radius-sm");
 
-  cardInteractions.appendChild(textButton);
+  cardInteractions.appendChild(profileButton);
   cardInteractions.appendChild(removeButton);
 
   cardInfoContainer.appendChild(userName);

@@ -33,7 +33,7 @@ textarea.addEventListener("input", (e) => {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const newPost = createPost(0, "userEmail@gmail.com", "Username", postContent);
+  const newPost = createPost(37, "Username", "inviteUser", 5, postContent);
   const firstPost = postWrapper.firstChild;
 
   postWrapper.insertBefore(newPost, firstPost);
