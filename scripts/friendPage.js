@@ -18,5 +18,3 @@ container.classList.add("width__limit");
 
 container.appendChild(topPart);
 container.appendChild(bottomPart);
-
-console.log(user);

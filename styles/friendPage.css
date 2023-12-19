@@ -14,16 +14,56 @@
 .user-page__details-container {
   width: max(20rem, 40%);
 }
+.friend-page__cover-container {
+  width: 100%;
+}
+.friend-page__cover {
+  width: 100%;
+  height: max(25vh, 20rem);
+  object-fit: cover;
+}
+.friend-page__profile-img {
+  width: 8.5rem;
+  height: 8.5rem;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+  transform: translate(0, -5rem);
+}
+.friend-page__profile-container {
+  padding: 0 4rem;
+}
+.friend-page__profile-name {
+  position: relative;
+  transform: translate(0, -1rem);
+  font-size: 1.7rem;
+}
+.friend-page__profile-name span:last-child {
+  font-size: 1.3rem;
+}
 @media (max-width: 850px) {
   .user-page__container {
     flex-direction: column;
-    padding: 0 0.5rem;
+    padding: 0;
   }
   .user-page__details-container {
     width: 100%;
     position: static;
   }
+  .post__container {
+    padding: 0.5rem 0.2rem;
+  }
   .menu-container {
     min-width: 100%;
+  }
+  .friend-page__profile-container {
+    justify-content: center;
+    flex-direction: column;
+    gap: 0rem;
+    text-align: center;
+    padding: 0rem;
+  }
+  .friend-page__profile-name {
+    transform: translate(0, -2rem);
   }
 }
