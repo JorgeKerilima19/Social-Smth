@@ -17,11 +17,11 @@ export default async function bottomInfo(user) {
 
   //create elements for each basic info element
   const basicUserInfo = [
-    { name: "nickname", value: user.username },
-    { name: "email", value: user.email },
-    { name: "website", value: user.website },
-    { name: "phone", value: user.phone },
-    { name: "company", value: user.company.name },
+    { name: "Nickname", value: user.username },
+    { name: "Email", value: user.email },
+    { name: "Website", value: user.website },
+    { name: "Phone", value: user.phone },
+    { name: "Company", value: user.company.name },
   ];
 
   basicUserInfo.forEach((el) => {
@@ -41,9 +41,38 @@ export default async function bottomInfo(user) {
   //classes
   detailsContainer.classList.add("menu-container", "container__bg-container");
 
-  //   detailsContainer.appendChild(userNickname);
-
   profileInfo.appendChild(detailsContainer);
+
+  //user Photos
+
+  const userPhotosContainer = document.createElement("div");
+
+  const photosTitle = document.createElement("h2");
+  photosTitle.innerText = "Photos";
+
+  userPhotosContainer.appendChild(photosTitle);
+  profileInfo.appendChild(userPhotosContainer);
+
+  //classes
+  userPhotosContainer.classList.add(
+    "menu-container",
+    "container__bg-container"
+  );
+
+  //User friends
+  const userFriendsContainer = document.createElement("div");
+
+  const friendsTitle = document.createElement("h2");
+  friendsTitle.innerText = "Friends";
+
+  userFriendsContainer.appendChild(friendsTitle);
+  profileInfo.appendChild(userFriendsContainer);
+
+  //classes
+  userFriendsContainer.classList.add(
+    "menu-container",
+    "container__bg-container"
+  );
 
   //User posts
   const userPosts = document.createElement("div");
@@ -73,7 +102,12 @@ export default async function bottomInfo(user) {
     "user-page__posts-container"
   );
 
-  profileInfo.classList.add("user-page__details-container");
+  profileInfo.classList.add(
+    "user-page__details-container",
+    "flex",
+    "flex__column",
+    "flex__gap-md"
+  );
   container.classList.add("flex", "flex__gap-md");
 
   container.appendChild(profileInfo);
