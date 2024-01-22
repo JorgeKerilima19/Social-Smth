@@ -35,18 +35,18 @@ export default function NavbarComponent() {
   //small screens
   const sourceSmall = document.createElement("source");
   sourceSmall.media = "(max-width: 600px)";
-  sourceSmall.srcset = "/assets/logos/alternativeLogo.svg";
+  sourceSmall.srcset = "../assets/logos/alternativeLogo.svg";
 
   // large screens
 
   const sourceLarge = document.createElement("source");
   sourceLarge.media = "(min-width: 601px)";
-  sourceLarge.srcset = "/assets/logos/mainLogo.svg";
+  sourceLarge.srcset = "../assets/logos/mainLogo.svg";
 
   // default && styles
 
   const fallbackImage = document.createElement("img");
-  fallbackImage.src = "/assets/logos/alternativeLogo.svg";
+  fallbackImage.src = "../assets/logos/alternativeLogo.svg";
   fallbackImage.alt = "My Image";
 
   // Applogo parent nodes

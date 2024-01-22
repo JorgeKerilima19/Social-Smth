@@ -1,15 +1,15 @@
 const options = [
   {
     name: "call",
-    svg: "../../assets/svg/chatSection/call.svg",
+    svg: "../assets/svg/chatSection/call.svg",
   },
   {
     name: "videochat",
-    svg: "../../assets/svg/chatSection/video.svg",
+    svg: "../assets/svg/chatSection/video.svg",
   },
   {
     name: "more info",
-    svg: "../../assets/svg/chatSection/moreinfo.svg",
+    svg: "../assets/svg/chatSection/moreinfo.svg",
   },
 ];
 

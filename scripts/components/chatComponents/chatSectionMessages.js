@@ -1,7 +1,7 @@
 const icons = [
-  { name: "audio", path: "../../assets/svg/chatSection/audio.svg" },
-  { name: "photo", path: "../../assets/svg/chatSection/photo.svg" },
-  { name: "gif", path: "../../assets/svg/chatSection/gif.svg" },
+  { name: "audio", path: "../assets/svg/chatSection/audio.svg" },
+  { name: "photo", path: "../assets/svg/chatSection/photo.svg" },
+  { name: "gif", path: "../assets/svg/chatSection/gif.svg" },
 ];
 
 const chatSectionMessages = () => {

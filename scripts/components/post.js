@@ -30,7 +30,7 @@ export default function createPost(
     localStorage.setItem("friend", idUser);
   });
 
-  postAuthorInfo.href = "/pages/friendPage.html";
+  postAuthorInfo.href = "./friendPage.html";
 
   postAuthorInfo.classList.add("flex", "flex__gap-sm");
 

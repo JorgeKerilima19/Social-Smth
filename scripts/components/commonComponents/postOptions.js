@@ -11,8 +11,8 @@ export default function postOptions() {
   });
 
   postSettings.classList.add("flex", "flex__gap-sm");
-  hidePost.src = "../../assets/svg/cross.svg";
-  postOptions.src = "../../assets/svg/dotsHorizontal.svg";
+  hidePost.src = "../assets/svg/cross.svg";
+  postOptions.src = "../assets/svg/dotsHorizontal.svg";
   postOptions.classList.add("svg-container__small");
   hidePost.classList.add("svg-container__small");
 

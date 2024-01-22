@@ -45,7 +45,7 @@ export default function videoComponent(user, smallForm = false) {
   const controllers = videoControls(video);
 
   // video.controls = true;
-  source.src = "../../../assets/videos/randomvideo.mp4";
+  source.src = "../assets/videos/randomvideo.mp4";
 
   video.appendChild(source);
 

@@ -45,7 +45,7 @@ if (menuRight) {
 const menuRightItems = [
   {
     itemTitle: "Friends",
-    itemImage: "/assets/svg/friends.svg",
+    itemImage: "../assets/svg/friends.svg",
     itemTo: "../pages/friendList.html",
   },
   {
@@ -55,17 +55,17 @@ const menuRightItems = [
   },
   {
     itemTitle: "Watch",
-    itemImage: "/assets/svg/watch.svg",
+    itemImage: "../assets/svg/watch.svg",
     itemTo: "../pages/watch.html",
   },
   {
     itemTitle: "Notifications",
-    itemImage: "/assets/svg/notifications.svg",
+    itemImage: "../assets/svg/notifications.svg",
     itemTo: "../pages/notifications.html",
   },
   {
     itemTitle: "Settings and Privacy",
-    itemImage: "/assets/svg/settings.svg",
+    itemImage: "../assets/svg/settings.svg",
     itemTo: "../pages/settings.html",
   },
 ];
