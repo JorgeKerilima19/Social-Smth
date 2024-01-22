@@ -15,17 +15,17 @@ const interactions = [
   {
     name: "Like",
 
-    svgPath: "../../assets/svg/like.svg",
+    svgPath: "../assets/svg/like.svg",
   },
   {
     name: "Comment",
 
-    svgPath: "../../assets/svg/comment.svg",
+    svgPath: "../assets/svg/comment.svg",
   },
   {
     name: "Share",
 
-    svgPath: "../../assets/svg/share.svg",
+    svgPath: "../assets/svg/share.svg",
   },
 ];
 

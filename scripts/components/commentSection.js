@@ -14,7 +14,7 @@ export default function commentSection(
   if (!displayed) {
     const closeComments = document.createElement("img");
 
-    closeComments.src = "../../assets/svg/cross.svg";
+    closeComments.src = "../assets/svg/cross.svg";
     closeComments.classList.add("svg-container__small", "margin__all-left");
 
     container.appendChild(closeComments);

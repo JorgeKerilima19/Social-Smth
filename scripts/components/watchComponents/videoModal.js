@@ -57,7 +57,7 @@ export default function videoModal(
 
   // Remove modal
   const closeModal = document.createElement("img");
-  closeModal.src = "../../assets/svg/cross.svg";
+  closeModal.src = "../assets/svg/cross.svg";
   closeModal.classList.add("video__close-modal");
 
   videoInfo.appendChild(closeModal);

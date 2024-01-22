@@ -142,7 +142,13 @@ export default function NavbarComponent() {
   navbarMainContainer.appendChild(logoContainer);
   navbarMainContainer.appendChild(navbarContainer);
 
-  navbarMainContainer.classList.add("flex", "width__full", "width__limit","flex__sp-btw","flex__item-center");
+  navbarMainContainer.classList.add(
+    "flex",
+    "width__full",
+    "width__limit",
+    "flex__sp-btw",
+    "flex__item-center"
+  );
 
   header.appendChild(navbarMainContainer);
   main.appendChild(MenuHamburger);

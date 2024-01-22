@@ -50,7 +50,7 @@ const menuRightItems = [
   },
   {
     itemTitle: "Saved",
-    itemImage: "/assets/svg/save.svg",
+    itemImage: "../assets/svg/save.svg",
     itemTo: "../pages/saved.html",
   },
   {

@@ -5,9 +5,9 @@ export default function videoControls(video) {
   const muteVideo = document.createElement("img");
   const fullScreen = document.createElement("img");
 
-  playVideo.src = "../../../assets/svg/pause.svg";
-  muteVideo.src = "../../../assets/svg/mute.svg";
-  fullScreen.src = "../../../assets/svg/fullscreen.svg";
+  playVideo.src = "../assets/svg/pause.svg";
+  muteVideo.src = "../assets/svg/mute.svg";
+  fullScreen.src = "../assets/svg/fullscreen.svg";
 
   playVideo.classList.add("video__button");
   muteVideo.classList.add("video__button");

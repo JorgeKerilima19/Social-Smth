@@ -28,7 +28,7 @@ export default function friendCard(user, userContact, index) {
   });
 
   profileButton.innerText = "See Profile";
-  profileButton.href = "/pages/friendPage.html";
+  profileButton.href = "./friendPage.html";
   removeButton.innerText = "Remove Friend";
 
   cardContainer.classList.add(
@@ -45,7 +45,8 @@ export default function friendCard(user, userContact, index) {
   profileButton.classList.add(
     "width__full",
     "border__radius-sm",
-    "bg__primary"
+    "bg__primary",
+    "text-center"
   );
   removeButton.classList.add("width__full", "border__radius-sm");
 

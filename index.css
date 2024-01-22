@@ -2,11 +2,11 @@
   margin: 0;
   padding: 0;
   border: 0;
-  font-family: "Andika", sans-serif;
   box-sizing: border-box;
 }
 html {
-  font-size: max(110%, 0.8vw);
+  font-size: clamp(0.95rem, 1vw, 1rem);
+  font-family: "Andika", sans-serif;
 }
 body {
   background-color: var(--bg-color-secondary);
