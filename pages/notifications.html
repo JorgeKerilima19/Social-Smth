@@ -2,10 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Andika&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../index.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Watch</title>
   </head>
   <body>
-    <h2>HELLO Notifications</h2>
+    <header id="header" class="header"></header>
+    <main id="main" class="main flex__gap-md">
+      <section
+        id="menu-right"
+        class="main__container-left flex__container pd-md"
+      >
+        <ul id="menu-left-container" class="menu-container">
+          <!---------
+            
+            Menu Items go here
+            
+          -------->
+        </ul>
+      </section>
+      <section id="notifications-container"></section>
+    </main>
+
+    <script type="module" src="../scripts/navbarRight.js"></script>
+    <script type="module" src="../scripts/notifications.js"></script>
   </body>
 </html>
