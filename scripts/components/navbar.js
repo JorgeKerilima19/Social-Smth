@@ -2,17 +2,17 @@ import hiddenMenu from "./hiddenMenu.js";
 
 const navRoutes = [
   {
-    itemlogo: "/assets/svg/chat.svg",
+    itemlogo: "../assets/svg/chat.svg",
     name: "ROute1",
     to: "./messages.html",
   },
   {
-    itemlogo: "/assets/svg/watch.svg",
+    itemlogo: "../assets/svg/watch.svg",
     name: "ROute1",
     to: "./watch.html",
   },
   {
-    itemlogo: "/assets/svg/notifications.svg",
+    itemlogo: "../assets/svg/notifications.svg",
     name: "ROute1",
     to: "./notifications.html",
   },
