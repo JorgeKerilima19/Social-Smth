@@ -2,6 +2,12 @@ import TopInfo from "./components/friendPage/TopInfo.js";
 import bottomInfo from "./components/friendPage/bottomInfo.js";
 import { getUser } from "./functions/fetchUsers.js";
 
+//reset main padding top
+
+const main = document.getElementById("main");
+
+main.style.paddingTop = "0rem";
+
 const friend = localStorage.getItem("friend");
 const user = await getUser(friend);
 

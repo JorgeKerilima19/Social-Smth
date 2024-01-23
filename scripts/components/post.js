@@ -32,7 +32,7 @@ export default function createPost(
 
   postAuthorInfo.href = "./friendPage.html";
 
-  postAuthorInfo.classList.add("flex", "flex__gap-sm");
+  postAuthorInfo.classList.add("flex", "flex__gap-sm","pd-sm");
 
   const photoId = friendsPhoto.filter((el) => el.id === idUser);
 
@@ -71,7 +71,7 @@ export default function createPost(
 
   const postContentContainer = document.createElement("section");
 
-  postContentContainer.classList.add("flex", "flex__gap-sm", "flex__column");
+  postContentContainer.classList.add("flex", "flex__gap-sm", "flex__column","pd-sm");
 
   const postMainContent = document.createElement("div");
 
