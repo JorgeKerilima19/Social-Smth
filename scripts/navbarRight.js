@@ -66,7 +66,7 @@ const menuRightItems = [
   {
     itemTitle: "Settings and Privacy",
     itemImage: "../assets/svg/settings.svg",
-    itemTo: "../pages/settings.html",
+    itemTo: "../pages/settings.html#",
   },
 ];
 
