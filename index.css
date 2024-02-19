@@ -245,6 +245,10 @@ a {
 .text-center {
   text-align: center;
 }
+.text-subtitle {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
 .relative {
   position: relative;
 }

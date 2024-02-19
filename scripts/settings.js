@@ -7,7 +7,7 @@ import settingsNavbar from "./components/settingsComponents/settingsNavbar.js";
 const settingsWrapper = document.getElementById("settings-container");
 const navbarContainer = document.getElementById("navbar-settings");
 
-settingsWrapper.classList.add("width__60");
+settingsWrapper.classList.add("width__60", "pd-md");
 navbarContainer.classList.add("width__30");
 
 const settingsNavigation = () => {

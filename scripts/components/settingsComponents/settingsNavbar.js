@@ -18,6 +18,12 @@ const items = [
 
 const settingsNavbar = () => {
   const container = document.createElement("ul");
+  container.classList.add(
+    "menu-container",
+    "height-full",
+    "pd-md",
+    "container__bg-container"
+  );
 
   items.forEach((el) => {
     const itemContainer = document.createElement("li");
@@ -27,6 +33,9 @@ const settingsNavbar = () => {
 
     linkContainer.innerText = el.name;
     linkContainer.href = el.to;
+
+    itemContainer.classList.add("flex");
+    linkContainer.classList.add("width__full");
 
     linkContainer.appendChild(spanElement);
     linkContainer.appendChild(svgElement);
