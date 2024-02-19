@@ -1,17 +1,17 @@
 const items = [
   {
     to: "#darkMode",
-    name: "item1",
+    name: "Dark Mode",
     svg: "",
   },
   {
     to: "#privacy",
-    name: "item2",
+    name: "Privacy",
     svg: "",
   },
   {
     to: "#feedback",
-    name: "item3",
+    name: "Feedback and Recomendations",
     svg: "",
   },
 ];

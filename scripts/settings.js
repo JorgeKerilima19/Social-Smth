@@ -1,26 +1,39 @@
+import { darkMode } from "./components/settingsComponents/darkMode.js";
+import { feedback } from "./components/settingsComponents/feedBack.js";
+import { privacy } from "./components/settingsComponents/privacy.js";
+
 import settingsNavbar from "./components/settingsComponents/settingsNavbar.js";
 
-const settinsWrapper = document.getElementById("settings-container");
+const settingsWrapper = document.getElementById("settings-container");
 const navbarContainer = document.getElementById("navbar-settings");
+
+settingsWrapper.classList.add("width__60");
+navbarContainer.classList.add("width__30");
 
 const settingsNavigation = () => {
   const hash = window.location.hash.substring(1);
 
   switch (hash) {
+    case "":
+      settingsWrapper.innerText = "";
+
     case "darkMode":
-      console.log("object2");
+      settingsWrapper.innerText = "";
+      settingsWrapper.appendChild(darkMode());
       break;
 
     case "privacy":
-      console.log("object3");
+      settingsWrapper.innerText = "";
+      settingsWrapper.appendChild(privacy());
       break;
 
     case "feedback":
-      console.log("object4");
+      settingsWrapper.innerText = "";
+      settingsWrapper.appendChild(feedback());
       break;
 
     default:
-      console.log("123");
+      settingsWrapper.innerText = "";
   }
 };
 
