@@ -8,3 +8,12 @@ signUpButtons.forEach((el) => {
     signUpContainer.classList.toggle("open");
   });
 });
+
+//Log in page
+
+const form = document.querySelector("#button-log-in");
+
+form.addEventListener("click", () => {
+  console.log("x");
+  window.location.href = "/pages/main.html";
+});

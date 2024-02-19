@@ -4,12 +4,14 @@ const options = [
   {
     name: "Settings and privacy",
     logo: "../assets/svg/settings.svg",
+    to: "/pages/settings.html",
   },
   {
     name: "Help center and feedback",
     logo: "../assets/svg/chatSection/call.svg",
+    to: "#",
   },
-  { name: "Log out", logo: "../assets/svg/logOut.svg" },
+  { name: "Log out", logo: "../assets/svg/logOut.svg", to: "/" },
 ];
 
 const hiddenMenu = () => {
@@ -63,12 +65,14 @@ const hiddenMenu = () => {
   optionsContainer.classList.add("menu-container");
 
   options.map((option) => {
-    const container = document.createElement("div");
+    const container = document.createElement("a");
     const optionImage = document.createElement("img");
     const optionName = document.createElement("span");
 
     optionImage.src = option.logo;
     optionName.innerText = option.name;
+
+    container.href = option.to;
 
     container.classList.add("flex", "flex__item-center", "flex__gap-sm");
     optionImage.classList.add("svg-container__small");
