@@ -11,7 +11,7 @@ const options = [
     logo: "../assets/svg/chatSection/call.svg",
     to: "#",
   },
-  { name: "Log out", logo: "../assets/svg/logOut.svg", to: "/" },
+  { name: "Log out", logo: "../assets/svg/logOut.svg", to: "/Social-Smth/" },
 ];
 
 const hiddenMenu = () => {

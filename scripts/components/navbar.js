@@ -54,7 +54,7 @@ export default function NavbarComponent() {
   appLogo.appendChild(sourceLarge);
   appLogo.appendChild(fallbackImage);
 
-  logoContainer.href = "/pages/main.html";
+  logoContainer.href = "/Social-Smth/pages/main.html";
   logoContainer.appendChild(appLogo);
 
   appLogo.classList.add("logo-container");
